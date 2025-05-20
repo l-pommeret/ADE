@@ -1,0 +1,45 @@
+{
+    "admin": {
+        "username": "admin",
+        "password": "pbkdf2:sha256:260000$v1mmUemgliPakE06$832075e11af64460d404bab7dfcd409c636f2993a19b14a5a600313cc584e89b",
+        "email": "admin@logos.fr",
+        "name": "Administrateur",
+        "selected_courses": {
+            "semestre1": [],
+            "semestre2": [],
+            "semestre3": [],
+            "semestre4": []
+        }
+    },
+    "etudiant": {
+        "username": "etudiant",
+        "password": "pbkdf2:sha256:260000$Gg4HxG0VghHPBIQz$aa18275534f7ced3d579e58e3e2b9f46cab2520789cf1b74859eb69d6f226d2b",
+        "email": "etudiant@logos.fr",
+        "name": "\u00c9tudiant Test",
+        "selected_courses": {
+            "semestre1": [],
+            "semestre2": [],
+            "semestre3": [],
+            "semestre4": []
+        }
+    },
+    "Luc Pommeret": {
+        "username": "Luc Pommeret",
+        "password": "pbkdf2:sha256:260000$FzFElstPQjZKWs9W$8e8e4ee7dde8acab88b97a9217a93ee1f6e19ed03d17772a850e86659af498ce",
+        "email": "lucpommeret@hotmail.fr",
+        "name": "Luc Pommeret",
+        "selected_courses": {
+            "semestre1": [
+                "s1_b1",
+                "s1_b2",
+                "s1_c1",
+                "s1_c3",
+                "s1_c4",
+                "s1_a1"
+            ],
+            "semestre2": [],
+            "semestre3": [],
+            "semestre4": []
+        }
+    }
+}

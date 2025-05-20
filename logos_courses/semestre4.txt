@@ -1,0 +1,92 @@
+SEMESTER 4 (30 ECTS)
+This semester is composed of :
+either 2 UEs (courses) of 6 ECTS (credits) each (belonging to two different blocks) and the writing of a dissertation counting for 18 ECTS (credits) (“the classical itinerary”) ; or an internship of at least four months counting for 30 ECTS (“the internship itinerary”).
+
+(I) The Classical Itinerary
+
+A) Philosophy of Science block
+Choice of 1 UE of 6 ECTS among:
+
++ Philosophy of mathematics
+
+
+
+
+
+
+
++ Mathematics for non-specialists
+
+
+
+
+
+
+
+
+
+
+B) Linguistics block
+Choice of 1 UE of 6 ECTS among:
+
++ Advanced theoretical syntax
+
+
++ Advanced experimental syntax
+
+
+
+
+
++ Syntax, semantics, discourse 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Advanced semantics pragmatics
+
+
+
+
+
+C) Bloc Logique
+Au choix, 1 UE de 6 ECTS parmi :
+
++ Set theory: classical tools
+
++ Model theory : classical tools
+
++ Proof-programs : classical tools
+
++ Calculability : classical tools
+
+D) Logic block
+Choice of 1 UE of 6 ECTS among :
+
++ Algorithms for massive data
+
++ Deep Learning
+
++ Logic, descriptive complexity and database theory
+
+E) Thesis (18 ECTS)
+
+(II) Internship itinerary
+
+Internship (30 ECTS)

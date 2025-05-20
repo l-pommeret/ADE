@@ -1,0 +1,90 @@
+SEMESTER 2 (30 ECTS)
+GUIDING PRINCIPLE FOR THE SEMESTER
+The student needs to choose 5 UEs (courses) for 6 ECTS (credits) each (at least one UE in each of the three blocks).
+
+A) Philosophy of Science block
+Choice of 1 or 2 UEs of 6 ECTS each from:
+
++ Philosophy of mathematics
+
+
+
+
+
+
+
++ Mathematics for non-specialists
+
+
+
+
+
+
+
+
+
+
+B) Linguistics block
+Choice of 1 or 2 courses of 6 ECTS each from:
+
++ Advanced theoretical syntax
+
+
++ Advanced experimental syntax
+
+
+
+
+
++ Syntax, semantics, discourse 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Advanced semantics pragmatics
+
+
+
+
+
++ Machine learning for NLP1
+
+
+
+
+
+
+
+
+
+
++ Computational semantics
+
+C) Logic and Computer Science block
+Choice of 1 or 2 courses of 6 ECTS from among:
+
++ Incompleteness and undecidability
+
++ Set theory
+
++ Fundamental statistics
+
++ Data analysis
+
++ Big Data technologies

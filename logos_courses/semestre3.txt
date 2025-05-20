@@ -1,0 +1,176 @@
+SEMESTER 3 (30 ECTS)
+GUIDING PRINCIPLE FOR THE SEMESTER:
+The student must choose:
+
+either 5 UEs (courses) for 6 ECTS (credits), or 3 UEs (courses) for 6 ECTS (credits) + 1 UE (course) for 12 ECTS (credits), and in any case at least one UE (course) in each of the four blocks.
+
+A)
+
+Philosophy of Science block
+Choice of 1 or 2 courses of 6 ECTS each among :
+
++ Philosophy of knowledge
+
+
+
+
+
+
+
+
++ History of linguistic theories
+
+B) Linguistics block
+Choice of 1 or 2 courses of 6 ECTS each from:
+
++ Discourse and dialogue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Semantics and pragmatics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Machine learning for NLP 2
+
+C) Logic block
+Choice of 1 or 2 courses of 6 or 12 ECTS each from:
+
++ Model theory (6) 
+
++ Set theory (6)
+
++ Proof theory (6) 
+
++ Computability and incompleteness (12)
+
++ Category theory (6)
+
+D) Computer Science block
+Choice of 1 or 2 UE of 6 or 12 ECTS each among:
+
++ Natural language processing
+
++ Machine Learning
+
++ Randomized Complexity
+
++ Introduction to Artificial Intelligence and Game Theory
+
++ Functional programming and formal proof in COQ
+
++ Theories of computation

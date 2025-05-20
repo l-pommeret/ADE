@@ -1,0 +1,2342 @@
+=== CALENDRIER ===
+
+
+Tuesday 03 september 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368631067
+    M2 MIDS
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368631201
+    M2 MIDS
+    [...]
+
+
+Tuesday 10 september 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368632068
+    M2 MIDS
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368632334
+    M2 MIDS
+    [...]
+
+
+Tuesday 17 september 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368633914
+    M2 MIDS
+    [...]
+
+08:30 - 10:30 : Theorie des ensembles CM01
+  Lieu: Germain - 1013 - 33
+  Description: 
+    1716820669829
+    M2 LMFI
+    [...]
+
+11:15 - 13:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820669828
+    M2 LMFI
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368634449
+    M2 MIDS
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368634488
+    M2  MPRI
+    [...]
+
+
+Wednesday 18 september 2024
+------------------------------
+08:30 - 10:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820669835
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820669812
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820669813
+    M2 LMFI
+    [...]
+
+
+Thursday 19 september 2024
+------------------------------
+06:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820669819
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368635284
+    M2  MPRI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820669836
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368635791
+    M2 LMFI
+    [...]
+
+
+Friday 20 september 2024
+------------------------------
+06:30 - 10:30 : Theorie de la demonstration TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820669821
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 1007 - 27
+  Description: 
+    1716820669837
+    M2 LMFI
+    [...]
+
+
+Tuesday 24 september 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368637188
+    M2 MIDS
+    [...]
+
+08:30 - 10:30 : Theorie des ensembles CM01
+  Lieu: Germain - 1013 - 33
+  Description: 
+    1716820671237
+    M2 LMFI
+    [...]
+
+11:15 - 13:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820671236
+    M2 LMFI
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368637786
+    M2 MIDS
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368637829
+    M2  MPRI
+    [...]
+
+
+Wednesday 25 september 2024
+------------------------------
+08:15 - 10:15 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 2017 - 40
+  Description: 
+    1716820671243
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820671216
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820671217
+    M2 LMFI
+    [...]
+
+
+Thursday 26 september 2024
+------------------------------
+06:30 - 10:30 : Theorie des modeles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820671227
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368638701
+    M2  MPRI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820671244
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368639262
+    M2 LMFI
+    [...]
+
+
+Friday 27 september 2024
+------------------------------
+06:30 - 10:30 : Calculabilite et incompletude TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820671229
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 1007 - 27
+  Description: 
+    1716820671245
+    M2 LMFI
+    [...]
+
+
+Tuesday 01 october 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368640745
+    M2 MIDS
+    [...]
+
+08:30 - 10:30 : Theorie des ensembles CM01
+  Lieu: Germain - 1013 - 33
+  Description: 
+    1716820672566
+    M2 LMFI
+    [...]
+
+11:15 - 13:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820672565
+    M2 LMFI
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368641333
+    M2 MIDS
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368641372
+    M2  MPRI
+    [...]
+
+
+Wednesday 02 october 2024
+------------------------------
+08:15 - 10:15 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 2017 - 40
+  Description: 
+    1716820672572
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820672549
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820672550
+    M2 LMFI
+    [...]
+
+
+Thursday 03 october 2024
+------------------------------
+06:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820672556
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368642274
+    M2  MPRI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820672573
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368642845
+    M2 LMFI
+    [...]
+
+
+Friday 04 october 2024
+------------------------------
+06:30 - 10:30 : Theorie de la demonstration TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820672558
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 1007 - 27
+  Description: 
+    1716820672574
+    M2 LMFI
+    [...]
+
+
+Tuesday 08 october 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368644348
+    M2 MIDS
+    [...]
+
+08:30 - 10:30 : Theorie des ensembles CM01
+  Lieu: Germain - 1013 - 33
+  Description: 
+    1716820673961
+    M2 LMFI
+    [...]
+
+11:15 - 13:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820673960
+    M2 LMFI
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368644941
+    M2 MIDS
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368644983
+    M2  MPRI
+    [...]
+
+
+Wednesday 09 october 2024
+------------------------------
+08:30 - 10:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820673967
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820673944
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820673945
+    M2 LMFI
+    [...]
+
+
+Thursday 10 october 2024
+------------------------------
+06:30 - 10:30 : Theorie des modeles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820673951
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368645896
+    M2  MPRI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820673968
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368646474
+    M2 LMFI
+    [...]
+
+
+Friday 11 october 2024
+------------------------------
+06:30 - 10:30 : Calculabilite et incompletude TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820673953
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 1007 - 27
+  Description: 
+    1716820673969
+    M2 LMFI
+    [...]
+
+
+Tuesday 15 october 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368648007
+    M2 MIDS
+    [...]
+
+08:30 - 10:30 : Theorie des ensembles CM01
+  Lieu: Lavoisier - 130 - 34
+  Description: 
+    1716820675316
+    M2 LMFI
+    [...]
+
+11:15 - 13:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820675315
+    M2 LMFI
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368648621
+    M2 MIDS
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368648660
+    M2  MPRI
+    [...]
+
+
+Wednesday 16 october 2024
+------------------------------
+08:30 - 10:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820675322
+    M2 LMFI
+    [...]
+
+
+Thursday 17 october 2024
+------------------------------
+06:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820675306
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368649567
+    M2  MPRI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Lavoisier - 130 - 34
+  Description: 
+    1716820675323
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Theorie de la demonstration CM01
+  Lieu: Gouges - 203 - 40
+  Description: 
+    1739368650155
+    M2 LMFI
+    [...]
+
+
+Friday 18 october 2024
+------------------------------
+07:00 - 09:00 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820675324
+    M2 LMFI
+    [...]
+
+11:45 - 15:45 : Theorie de la demonstration TD01
+  Lieu: Germain - 1007 - 27
+  Description: 
+    1716820675308
+    M2 LMFI
+    [...]
+
+
+Tuesday 22 october 2024
+------------------------------
+08:30 - 11:30 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368651642
+    M2 MIDS
+    [...]
+
+08:30 - 10:30 : Theorie des ensembles CM01
+  Lieu: Lavoisier - 130 - 34
+  Description: 
+    1716820676636
+    M2 LMFI
+    [...]
+
+11:15 - 13:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820676635
+    M2 LMFI
+    [...]
+
+13:15 - 15:15 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 1020 - 30
+  Description: 
+    1716820675299
+    M2 LMFI
+    [...]
+
+15:45 - 17:45 : Introduction au machine learning CM01
+  Lieu: Germain - 1009 - (60p)
+  Description: 
+    1739368652220
+    M2 MIDS
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368652255
+    M2  MPRI
+    [...]
+
+15:15 - 17:15 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2005 - 22
+  Description: 
+    1716820675300
+    M2 LMFI
+    [...]
+
+
+Wednesday 23 october 2024
+------------------------------
+11:45 - 13:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820676619
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820676620
+    M2 LMFI
+    [...]
+
+
+Thursday 24 october 2024
+------------------------------
+06:30 - 10:30 : Theorie des modeles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820676626
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368653142
+    M2  MPRI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820676643
+    M2 LMFI
+    [...]
+
+14:00 - 16:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368653693
+    M2 LMFI
+    [...]
+
+
+Friday 25 october 2024
+------------------------------
+06:30 - 10:30 : Calculabilite et incompletude TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820676628
+    M2 LMFI
+    [...]
+
+11:45 - 13:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 1007 - 27
+  Description: 
+    1716820676644
+    M2 LMFI
+    [...]
+
+
+Tuesday 29 october 2024
+------------------------------
+09:30 - 11:30 : Theorie des ensembles CM01
+  Lieu: Lavoisier - 130 - 34
+  Description: 
+    1716820677070
+    M2 LMFI
+    [...]
+
+12:15 - 14:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820677069
+    M2 LMFI
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368654836
+    M2  MPRI
+    [...]
+
+
+Wednesday 30 october 2024
+------------------------------
+09:30 - 11:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Gouges - 203 - 40
+  Description: 
+    1716820677071
+    M2 LMFI
+    [...]
+
+
+Thursday 31 october 2024
+------------------------------
+07:30 - 11:30 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820677068
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368655135
+    M2  MPRI
+    [...]
+
+12:45 - 14:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368655257
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368655305
+    M2 LMFI
+    [...]
+
+
+Monday 04 november 2024
+------------------------------
+14:45 - 17:45 : Theorie de la demonstration EXAMEN
+  Lieu: Halle - 579F - 40
+  Description: 
+    1739368655998
+    M2 LMFI
+    [...]
+
+
+Tuesday 05 november 2024
+------------------------------
+07:45 - 09:45 : Theorie des ensembles CM01
+  Lieu: Halle - 578F - 40
+  Description: 
+    1716820678335
+    M2 LMFI
+    [...]
+
+10:00 - 13:00 : Introduction au machine learning EXAMEN
+  Lieu: Halle - 247E - (84p),Halle - 580F - 90
+  Description: 
+    1739368656344
+    M2MO - Tous parcours
+    [...]
+
+12:15 - 14:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820678334
+    M2 LMFI
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368656846
+    M2  MPRI
+    [...]
+
+
+Wednesday 06 november 2024
+------------------------------
+09:30 - 11:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Halle - 270F - 28
+  Description: 
+    1716820678341
+    M2 LMFI
+    [...]
+
+12:45 - 14:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820678318
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820678319
+    M2 LMFI
+    [...]
+
+
+Thursday 07 november 2024
+------------------------------
+07:30 - 11:30 : Theorie des modeles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820678325
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368657782
+    M2  MPRI
+    [...]
+
+12:45 - 14:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368658137
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2014 - 40
+  Description: 
+    1739368658313
+    M2 LMFI
+    [...]
+
+
+Friday 08 november 2024
+------------------------------
+07:30 - 11:30 : Calculabilite et incompletude TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820678327
+    M2 LMFI
+    [...]
+
+12:30 - 14:30 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368658782
+    M2 LMFI
+    [...]
+
+
+Tuesday 12 november 2024
+------------------------------
+09:30 - 11:30 : Theorie des ensembles CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820679344
+    M2 LMFI
+    [...]
+
+12:15 - 14:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820679343
+    M2 LMFI
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368659703
+    M2  MPRI
+    [...]
+
+
+Wednesday 13 november 2024
+------------------------------
+09:30 - 11:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820679350
+    M2 LMFI
+    [...]
+
+12:45 - 14:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820679329
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820679330
+    M2 LMFI
+    [...]
+
+
+Thursday 14 november 2024
+------------------------------
+07:30 - 11:30 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820679335
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368660601
+    M2  MPRI
+    [...]
+
+12:45 - 14:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368661009
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2014 - 40
+  Description: 
+    1739368661199
+    M2 LMFI
+    [...]
+
+
+Friday 15 november 2024
+------------------------------
+07:30 - 11:30 : Theorie de la demonstration TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820679337
+    M2 LMFI
+    [...]
+
+12:30 - 14:30 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368661713
+    M2 LMFI
+    [...]
+
+
+Tuesday 19 november 2024
+------------------------------
+09:30 - 11:30 : Theorie des ensembles CM01
+  Lieu: Halle - 027C - 70
+  Description: 
+    1716820680654
+    M2 LMFI
+    [...]
+
+12:15 - 14:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820680653
+    M2 LMFI
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368663391
+    M2  MPRI
+    [...]
+
+
+Wednesday 20 november 2024
+------------------------------
+09:30 - 11:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820680660
+    M2 LMFI
+    [...]
+
+12:45 - 14:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820680637
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820680638
+    M2 LMFI
+    [...]
+
+
+Thursday 21 november 2024
+------------------------------
+07:30 - 11:30 : Theorie des modeles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820680644
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368664303
+    M2  MPRI
+    [...]
+
+12:45 - 14:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368664692
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2014 - 40
+  Description: 
+    1739368664878
+    M2 LMFI
+    [...]
+
+
+Friday 22 november 2024
+------------------------------
+07:30 - 11:30 : Calculabilite et incompletude TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820680646
+    M2 LMFI
+    [...]
+
+12:30 - 14:30 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368665404
+    M2 LMFI
+    [...]
+
+
+Tuesday 26 november 2024
+------------------------------
+09:30 - 11:30 : Theorie des ensembles CM01
+  Lieu: Halle - 411B - 32
+  Description: 
+    1716820681964
+    M2 LMFI
+    [...]
+
+12:15 - 14:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820681963
+    M2 LMFI
+    [...]
+
+14:15 - 16:15 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 1020 - 30
+  Description: 
+    1716820677066
+    M2 LMFI
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368667053
+    M2  MPRI
+    [...]
+
+16:15 - 18:15 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2005 - 22
+  Description: 
+    1716820677067
+    M2 LMFI
+    [...]
+
+
+Wednesday 27 november 2024
+------------------------------
+09:30 - 11:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820681970
+    M2 LMFI
+    [...]
+
+12:45 - 14:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820681947
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820681948
+    M2 LMFI
+    [...]
+
+
+Thursday 28 november 2024
+------------------------------
+07:30 - 11:30 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820681954
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368667935
+    M2  MPRI
+    [...]
+
+12:45 - 14:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368668349
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2014 - 40
+  Description: 
+    1739368668535
+    M2 LMFI
+    [...]
+
+
+Friday 29 november 2024
+------------------------------
+07:30 - 11:30 : Theorie de la demonstration TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820681956
+    M2 LMFI
+    [...]
+
+12:30 - 14:30 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368669060
+    M2 LMFI
+    [...]
+
+
+Tuesday 03 december 2024
+------------------------------
+09:30 - 11:30 : Theorie des ensembles CM01
+  Lieu: Gouges - 265 - 30
+  Description: 
+    1716820683113
+    M2 LMFI
+    [...]
+
+12:15 - 14:15 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820683112
+    M2 LMFI
+    [...]
+
+16:15 - 19:15 : Complexite randomisee
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368670700
+    M2  MPRI
+    [...]
+
+
+Wednesday 04 december 2024
+------------------------------
+09:30 - 11:30 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1016 - 40
+  Description: 
+    1716820683119
+    M2 LMFI
+    [...]
+
+
+Thursday 05 december 2024
+------------------------------
+07:30 - 11:30 : Theorie des modeles TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820683104
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Calculs sur les reels: modeles,calculabilite,complexite
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368671566
+    M2  MPRI
+    [...]
+
+12:45 - 14:45 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1739368671956
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Theorie de la demonstration CM01
+  Lieu: Germain - 2014 - 40
+  Description: 
+    1739368672139
+    M2 LMFI
+    [...]
+
+
+Friday 06 december 2024
+------------------------------
+07:30 - 11:30 : Calculabilite et incompletude TD01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1716820683106
+    M2 LMFI
+    [...]
+
+12:30 - 14:30 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368672656
+    M2 LMFI
+    [...]
+
+
+Tuesday 10 december 2024
+------------------------------
+13:00 - 16:00 : Theorie des ensembles EXAMEN
+  Lieu: Germain - 1009 - 60
+  Description: 
+    1739368674000
+    M2 LMFI
+    [...]
+
+
+Wednesday 11 december 2024
+------------------------------
+09:45 - 11:45 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Germain - 1015 - 40
+  Description: 
+    1716820676642
+    M2 LMFI
+    [...]
+
+12:45 - 14:45 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820683097
+    M2 LMFI
+    [...]
+
+15:00 - 17:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1716820683098
+    M2 LMFI
+    [...]
+
+
+Thursday 12 december 2024
+------------------------------
+07:30 - 11:30 : Theorie de la demonstration TD01
+  Lieu: Germain - 2011 - 40
+  Description: 
+    1716820684006
+    M2 LMFI
+    [...]
+
+13:00 - 16:00 : Theorie des Modeles : cours specialise EXAMEN
+  Lieu: Halle - 264E - 70
+  Description: 
+    1739368675360
+    M2 LMFI
+    [...]
+
+
+Friday 13 december 2024
+------------------------------
+09:30 - 11:30 : Calculabilite et incompletude CM01
+  Lieu: Germain - 2013 - 28
+  Description: 
+    1739368675776
+    M2 LMFI
+    [...]
+
+
+Tuesday 17 december 2024
+------------------------------
+08:00 - 11:00 : Calculabilite et incompletude EXAMEN
+  Lieu: Germain - 1009 - 60
+  Description: 
+    1739368676712
+    M2 LMFI
+    [...]
+
+
+Wednesday 18 december 2024
+------------------------------
+08:00 - 11:00 : Theorie categories & algebres homotopiques, categories sup CM01
+  Lieu: Halle - 478F - 52
+  Description: 
+    1739368677149
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1739368677400
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Programmation fonctionnelle et preuves formelles en coq TP01
+  Lieu: Germain - 2006 - 22
+  Description: 
+    1739368677452
+    M2 LMFI
+    [...]
+
+
+Thursday 19 december 2024
+------------------------------
+13:00 - 16:00 : Theorie de la demonstration EXAMEN
+  Lieu: Germain - 1009 - 60
+  Description: 
+    1739368677789
+    M2 LMFI
+    [...]
+
+
+Tuesday 07 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368678579
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368678685
+    M2 LMFI
+    [...]
+
+
+Wednesday 08 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2018 - 30
+  Description: 
+    1739368678874
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Halle - 125C - 28
+  Description: 
+    1739368678981
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Gouges - 130 - 30
+  Description: 
+    1739368679124
+    M2 LMFI
+    [...]
+
+
+Thursday 09 january 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368679171
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368679381
+    M2 LMFI
+    [...]
+
+
+Friday 10 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368679476
+    M2 LMFI
+    [...]
+
+
+Tuesday 14 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368680037
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368680152
+    M2 LMFI
+    [...]
+
+
+Wednesday 15 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2018 - 30
+  Description: 
+    1739368680398
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Halle - 125C - 28
+  Description: 
+    1739368680529
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2018 - 30
+  Description: 
+    1739368680687
+    M2 LMFI
+    [...]
+
+
+Thursday 16 january 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368680743
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368681027
+    M2 LMFI
+    [...]
+
+
+Friday 17 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368681171
+    M2 LMFI
+    [...]
+
+
+Tuesday 21 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368682332
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368682583
+    M2 LMFI
+    [...]
+
+
+Wednesday 22 january 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368683133
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Halle - 125C - 28
+  Description: 
+    1739368683443
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2018 - 30
+  Description: 
+    1739368683853
+    M2 LMFI
+    [...]
+
+
+Thursday 23 january 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368683967
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368684493
+    M2 LMFI
+    [...]
+
+
+Friday 24 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368684791
+    M2 LMFI
+    [...]
+
+
+Tuesday 28 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368686288
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368686560
+    M2 LMFI
+    [...]
+
+
+Wednesday 29 january 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368687186
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368687226
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Halle - 125C - 28
+  Description: 
+    1739368687509
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Gouges - 130 - 30
+  Description: 
+    1739368687975
+    M2 LMFI
+    [...]
+
+
+Thursday 30 january 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368688095
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368688686
+    M2 LMFI
+    [...]
+
+
+Friday 31 january 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368689044
+    M2 LMFI
+    [...]
+
+
+Tuesday 04 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368690662
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368690946
+    M2 LMFI
+    [...]
+
+
+Wednesday 05 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368691588
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368691632
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368691931
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Gouges - 130 - 30
+  Description: 
+    1739368692407
+    M2 LMFI
+    [...]
+
+
+Thursday 06 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368692542
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 266 - 30
+  Description: 
+    1739368693180
+    M2 LMFI
+    [...]
+
+
+Friday 07 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368693554
+    M2 LMFI
+    [...]
+
+
+Tuesday 11 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368695226
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368695502
+    M2 LMFI
+    [...]
+
+
+Wednesday 12 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368696166
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368696209
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 266 - 30
+  Description: 
+    1739368696505
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Condorcet - 302A - 29
+  Description: 
+    1739368696992
+    M2 LMFI
+    [...]
+
+
+Thursday 13 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368697129
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368697756
+    M2 LMFI
+    [...]
+
+
+Friday 14 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368698140
+    M2 LMFI
+    [...]
+
+
+Tuesday 18 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368699751
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368700012
+    M2 LMFI
+    [...]
+
+
+Wednesday 19 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368700632
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368700665
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368700931
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Condorcet - 302A - 29
+  Description: 
+    1739368701383
+    M2 LMFI
+    [...]
+
+
+Thursday 20 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368701517
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368702073
+    M2 LMFI
+    [...]
+
+
+Friday 21 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368702422
+    M2 LMFI
+    [...]
+
+
+Tuesday 25 february 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368703341
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368703428
+    M2 LMFI
+    [...]
+
+
+Wednesday 26 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368703627
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368703648
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368703741
+    M2 LMFI
+    [...]
+
+
+Thursday 27 february 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368703911
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368704100
+    M2 LMFI
+    [...]
+
+
+Tuesday 04 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368705357
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368705635
+    M2 LMFI
+    [...]
+
+
+Wednesday 05 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368706268
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368706307
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368706600
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Condorcet - 302A - 29
+  Description: 
+    1739368707069
+    M2 LMFI
+    [...]
+
+
+Thursday 06 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368707206
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368707798
+    M2 LMFI
+    [...]
+
+
+Friday 07 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368708171
+    M2 LMFI
+    [...]
+
+16:15 - 17:15 : Complexite randomisee (long) - Algorithmes et complexité paramétrés (tutorat)
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368708763
+    M2  MPRI
+    [...]
+
+
+Tuesday 11 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368709778
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368710051
+    M2 LMFI
+    [...]
+
+
+Wednesday 12 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368710680
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368710722
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368711008
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Gouges - 255 - 60
+  Description: 
+    1739368711479
+    M2 LMFI
+    [...]
+
+
+Thursday 13 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368711617
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Germain - 1005 - 37
+  Description: 
+    1739368712216
+    M2 LMFI
+    [...]
+
+
+Friday 14 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368712595
+    M2 LMFI
+    [...]
+
+16:15 - 17:15 : Complexite randomisee (long) - Algorithmes et complexité paramétrés (tutorat)
+  Lieu: Germain - 1004 - (30p)
+  Description: 
+    1739368713194
+    M2  MPRI
+    [...]
+
+
+Tuesday 18 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368714162
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368714412
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie des Modeles : cours specialise CM01
+  Lieu: Condorcet - 204A - 20
+  Description: 
+    1739368715004
+    M2 LMFI
+    [...]
+
+
+Wednesday 19 march 2025
+------------------------------
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368715051
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368715316
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Condorcet - 302A - 29
+  Description: 
+    1739368715761
+    M2 LMFI
+    [...]
+
+
+Thursday 20 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368715888
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 266 - 30
+  Description: 
+    1739368716461
+    M2 LMFI
+    [...]
+
+
+Friday 21 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368716822
+    M2 LMFI
+    [...]
+
+
+Tuesday 25 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368718363
+    M2 LMFI
+    [...]
+
+10:00 - 12:00 : Theorie des ensembles : outils classiques CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368718618
+    M2 LMFI
+    [...]
+
+
+Wednesday 26 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 1006 - 36
+  Description: 
+    1739368719179
+    M2 LMFI
+    [...]
+
+08:45 - 11:45 : Deep Learning CM01
+  Lieu: Germain - 0011 - (60p)
+  Description: 
+    1739368719224
+    M2MO - Parcours Data Science
+    [...]
+
+10:00 - 12:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 358 - 30
+  Description: 
+    1739368719492
+    M2 LMFI
+    [...]
+
+15:15 - 17:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Condorcet - 302A - 29
+  Description: 
+    1739368719943
+    M2 LMFI
+    [...]
+
+
+Thursday 27 march 2025
+------------------------------
+07:30 - 09:30 : Theorie des modeles : outils classiques CM01
+  Lieu: Germain - 2012 - 30
+  Description: 
+    1739368720071
+    M2 LMFI
+    [...]
+
+13:00 - 15:00 : Theorie de la  calculabilite :  cours specialise CM01
+  Lieu: Gouges - 266 - 30
+  Description: 
+    1739368720641
+    M2 LMFI
+    [...]
+
+
+Friday 28 march 2025
+------------------------------
+07:45 - 09:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2016 - 30
+  Description: 
+    1739368720991
+    M2 LMFI
+    [...]
+
+
+Wednesday 02 april 2025
+------------------------------
+07:00 - 10:00 : Theorie des modeles : outils classiques CM01
+  Lieu: Condorcet - 304A - 30
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+12:15 - 14:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Halle - 248E - 43
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+14:15 - 16:15 : Theorie des modeles : outils classiques CM01
+  Lieu: Halle - 248E - 43
+  Description: 
+    1739368724093
+    M2 LMFI
+    [...]
+
+
+Thursday 03 april 2025
+------------------------------
+07:00 - 10:00 : Theorie des modeles : outils classiques CM01
+  Lieu: Gouges - 135 - 30
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+
+Friday 04 april 2025
+------------------------------
+06:45 - 08:45 : Theorie des Modeles : cours specialise CM01
+  Lieu: Germain - 2018 - 30
+  Description: 
+    1739368725138
+    M2 LMFI
+    [...]
+
+
+Thursday 10 april 2025
+------------------------------
+07:00 - 10:00 : Theorie des modeles : outils classiques EXAMEN
+  Lieu: Germain - 2014 - 40
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+
+Friday 11 april 2025
+------------------------------
+13:00 - 15:00 : Theorie des ensembles : outils classiques EXAMEN
+  Lieu: Germain - 1006 - 36
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+
+Tuesday 27 may 2025
+------------------------------
+09:30 - 11:30 : Introduction au machine learning EXAMEN
+  Lieu: Germain - 0010 - (40p)
+  Description: 
+    
+    M2MO - Tous parcours
+    [...]
+
+
+Tuesday 17 june 2025
+------------------------------
+07:00 - 10:00 : Theorie des modeles EXAMEN
+  Lieu: Germain - 2011 - 40
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+12:00 - 15:00 : Calculabilite et incompletude EXAMEN
+  Lieu: Germain - 2011 - 40
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+
+Monday 23 june 2025
+------------------------------
+12:00 - 15:00 : Theorie des ensembles EXAMEN
+  Lieu: Germain - 2011 - 40
+  Description: 
+    
+    M2 LMFI
+    [...]
+
+
+Tuesday 24 june 2025
+------------------------------
+12:00 - 15:00 : Theorie de la demonstration EXAMEN
+  Lieu: Germain - 2011 - 40
+  Description: 
+    
+    M2 LMFI
+    [...]

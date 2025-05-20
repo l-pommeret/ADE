@@ -1,0 +1,1617 @@
+=== CALENDRIER ===
+
+
+Monday 09 september 2024
+------------------------------
+13:45 - 15:15 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820668083
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 10 september 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1016 - (40p)
+  Description: 
+    1716820668182
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820668237
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 11 september 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820668329
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820668356
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 12 september 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820668379
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820668422
+    M1 MFA Groupe 1
+    [...]
+
+
+Friday 13 september 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820668565
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 16 september 2024
+------------------------------
+13:45 - 15:15 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820668749
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 17 september 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1014 - (30p)
+  Description: 
+    1716820668955
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820669093
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 18 september 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820669324
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820669370
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 19 september 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820669418
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820669497
+    M1 MFA Groupe 1
+    [...]
+
+
+Friday 20 september 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820669755
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 23 september 2024
+------------------------------
+13:45 - 15:15 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820670052
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 24 september 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1014 - (30p)
+  Description: 
+    1716820670267
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820670416
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 25 september 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820670654
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820670702
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 26 september 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820670755
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820670843
+    M1 MFA Groupe 1
+    [...]
+
+
+Friday 27 september 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820671135
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 30 september 2024
+------------------------------
+13:45 - 15:15 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820671451
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 01 october 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1014 - (30p)
+  Description: 
+    1716820671661
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820671805
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 02 october 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820672039
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Algorithmique CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820672079
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 03 october 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820672132
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820672215
+    M1 MFA Groupe 1
+    [...]
+
+
+Friday 04 october 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820672490
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 08 october 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1014 - (30p)
+  Description: 
+    1716820673017
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820673169
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 09 october 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820673408
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820673454
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 10 october 2024
+------------------------------
+08:30 - 10:30 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820673537
+    M1 MIC
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820673602
+    M1 MIC
+    [...]
+
+
+Friday 11 october 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820673880
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 14 october 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368647659
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 15 october 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1014 - (30p)
+  Description: 
+    1716820674403
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820674551
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 16 october 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820674782
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820674828
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 17 october 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820674900
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820674975
+    M1 MIC
+    [...]
+
+
+Friday 18 october 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820675235
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 21 october 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368651323
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 22 october 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Germain - 1014 - (30p)
+  Description: 
+    1716820675745
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820675891
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 23 october 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820676122
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820676164
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 24 october 2024
+------------------------------
+08:30 - 10:30 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820676237
+    M1 MIC
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820676300
+    M1 MIC
+    [...]
+
+
+Friday 25 october 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820676559
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 04 november 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368655853
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 05 november 2024
+------------------------------
+10:45 - 12:15 : Logique CM01
+  Lieu: Halle - 264E - (70p)
+  Description: 
+    1716820677431
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820677581
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 06 november 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820677814
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820677856
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 07 november 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820678931
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 0013 - (40p)
+  Description: 
+    1716820677995
+    M1 MIC
+    [...]
+
+
+Friday 08 november 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820678258
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 12 november 2024
+------------------------------
+10:45 - 12:15 : Logique CM01
+  Lieu: Halle - 264E - (70p)
+  Description: 
+    1716820678472
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820678605
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 13 november 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820678823
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820678863
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 14 november 2024
+------------------------------
+08:30 - 10:30 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820677934
+    M1 MIC
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820679000
+    M1 MIC
+    [...]
+
+
+Friday 15 november 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820679260
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 18 november 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368662421
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 19 november 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Halle - 247E - (84p)
+  Description: 
+    1716820679761
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820679905
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 20 november 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820680126
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820680169
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 21 november 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820681556
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820680306
+    M1 MIC
+    [...]
+
+
+Friday 22 november 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820680568
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 25 november 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368666077
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 26 november 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Halle - 247E - (84p)
+  Description: 
+    1716820681082
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820681225
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 27 november 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820681448
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820681488
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 28 november 2024
+------------------------------
+08:30 - 10:30 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820680243
+    M1 MIC
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820681620
+    M1 MIC
+    [...]
+
+
+Friday 29 november 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820681881
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 02 december 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368669726
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 03 december 2024
+------------------------------
+10:15 - 11:45 : Logique CM01
+  Lieu: Halle - 247E - (84p)
+  Description: 
+    1716820682339
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:15 - 15:15 : Logique TD01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820682465
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 04 december 2024
+------------------------------
+13:45 - 15:15 : Logique CM01
+  Lieu: Germain - 2012 - (30p)
+  Description: 
+    1716820682661
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+15:30 - 17:00 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1716820682702
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 05 december 2024
+------------------------------
+08:30 - 10:30 : Algorithmique TP01
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    1716820683754
+    M1 MFA Groupe 1
+    [...]
+
+10:45 - 12:45 : Complexite TD01
+  Lieu: Germain - 2011 - (40p)
+  Description: 
+    1716820682820
+    M1 MIC
+    [...]
+
+
+Friday 06 december 2024
+------------------------------
+15:45 - 17:45 : Logique TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1716820683041
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 09 december 2024
+------------------------------
+13:45 - 15:15 : Complexite CM01
+  Lieu: Halle - 419C - (70p)
+  Description: 
+    1739368673271
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 11 december 2024
+------------------------------
+14:00 - 15:30 : Complexite CM01
+  Lieu: Halle - 418C - (70p)
+  Description: 
+    1739368674644
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 19 december 2024
+------------------------------
+08:30 - 12:30 : Algorithmique EXAMEN
+  Lieu: Germain - 2004 -TP- (22p),Germain - 2005 - 22
+  Description: 
+    1739368677510
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 08 january 2025
+------------------------------
+14:00 - 17:00 : Complexite EXAMEN
+  Lieu: Halle - 9E - (147p),Halle - 7C - 147
+  Description: 
+    1739368679059
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 10 january 2025
+------------------------------
+09:30 - 12:30 : Logique EXAMEN
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368679523
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 13 january 2025
+------------------------------
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Gouges - 130 - (30p)
+  Description: 
+    1739368679831
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Statistique fondamentale TD01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368679896
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 14 january 2025
+------------------------------
+08:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 1007 - (27p)
+  Description: 
+    1739368680009
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 16 january 2025
+------------------------------
+08:30 - 10:30 : Statistique fondamentale CM01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368680759
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Halle - 405B - (38p)
+  Description: 
+    1739368680902
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368680991
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 17 january 2025
+------------------------------
+10:45 - 12:45 : Statistique fondamentale CM01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368681290
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:30 - 15:30 : Statistique fondamentale TD01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368681359
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 20 january 2025
+------------------------------
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Gouges - 130 - (30p)
+  Description: 
+    1739368681780
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Statistique fondamentale TD01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368681975
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 21 january 2025
+------------------------------
+08:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 1007 - (27p)
+  Description: 
+    1739368682281
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 23 january 2025
+------------------------------
+08:30 - 10:30 : Statistique fondamentale CM01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368683991
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Halle - 405B - (38p)
+  Description: 
+    1739368684213
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368684445
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 24 january 2025
+------------------------------
+10:45 - 12:45 : Statistique fondamentale CM01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368684994
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:30 - 15:30 : Statistique fondamentale TD01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368685154
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 27 january 2025
+------------------------------
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Gouges - 130 - (30p)
+  Description: 
+    1739368685663
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Statistique fondamentale TD01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368685881
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 28 january 2025
+------------------------------
+08:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 1007 - (27p)
+  Description: 
+    1739368686221
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 30 january 2025
+------------------------------
+08:30 - 10:30 : Statistique fondamentale CM01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368688127
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Halle - 405B - (38p)
+  Description: 
+    1739368688360
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368688628
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 31 january 2025
+------------------------------
+10:45 - 12:45 : Statistique fondamentale CM01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368689248
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:30 - 15:30 : Statistique fondamentale TD01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368689445
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 03 february 2025
+------------------------------
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Gouges - 130 - (30p)
+  Description: 
+    1739368689997
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Statistique fondamentale TD01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368690224
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 04 february 2025
+------------------------------
+08:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 1007 - (27p)
+  Description: 
+    1739368690584
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 06 february 2025
+------------------------------
+08:30 - 10:30 : Statistique fondamentale CM01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368692577
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Halle - 406B - (43p)
+  Description: 
+    1739368692836
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368693122
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 07 february 2025
+------------------------------
+10:45 - 12:45 : Statistique fondamentale CM01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368693771
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:30 - 15:30 : Statistique fondamentale TD01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368693968
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 10 february 2025
+------------------------------
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Gouges - 130 - (30p)
+  Description: 
+    1739368694548
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Statistique fondamentale TD01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368694786
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 11 february 2025
+------------------------------
+08:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 1007 - (27p)
+  Description: 
+    1739368695149
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 13 february 2025
+------------------------------
+08:30 - 10:30 : Statistique fondamentale CM01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368697165
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Halle - 405B - (38p)
+  Description: 
+    1739368697411
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+12:00 - 13:00 : Statistique fondamentale CM01
+  Lieu: Germain - 1003 - (39p)
+  Description: 
+    1739368697540
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368697701
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 14 february 2025
+------------------------------
+10:45 - 12:45 : Statistique fondamentale CM01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368698351
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:30 - 15:30 : Statistique fondamentale TD01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368698562
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 17 february 2025
+------------------------------
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Gouges - 130 - (30p)
+  Description: 
+    1739368699118
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Statistique fondamentale TD01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368699346
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 18 february 2025
+------------------------------
+08:30 - 10:30 : Theorie des ensembles TD01
+  Lieu: Germain - 1007 - (27p)
+  Description: 
+    1739368699687
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 20 february 2025
+------------------------------
+08:30 - 10:30 : Statistique fondamentale CM01
+  Lieu: Germain - 1021 - (64p)
+  Description: 
+    1739368701545
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Theorie des ensembles CM01
+  Lieu: Halle - 405B - (38p)
+  Description: 
+    1739368701760
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:45 - 16:45 : Theorie des ensembles TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368702028
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 21 february 2025
+------------------------------
+10:45 - 12:45 : Statistique fondamentale CM01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368702595
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+13:30 - 15:30 : Statistique fondamentale TD01
+  Lieu: Germain - 2015 - (40p)
+  Description: 
+    1739368702773
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 03 march 2025
+------------------------------
+13:30 - 16:30 : Statistique fondamentale EXAMEN
+  Lieu: Halle - 247E - (84p)
+  Description: 
+    1739368704880
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 06 march 2025
+------------------------------
+14:00 - 17:00 : Theorie des ensembles EXAMEN
+  Lieu: Gouges - 203 - (40p)
+  Description: 
+    1739368707759
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 07 march 2025
+------------------------------
+13:30 - 16:30 : Theorie des ensembles EXAMEN
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 10 march 2025
+------------------------------
+14:00 - 16:00 : Incompletude et indecidabilites CM01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368709435
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 11 march 2025
+------------------------------
+08:30 - 10:30 : Incompletude et indecidabilites CM01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368709719
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Incompletude et indecidabilites TD01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368710044
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 12 march 2025
+------------------------------
+13:45 - 16:45 : Incompletude et indecidabilites TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368711211
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 17 march 2025
+------------------------------
+14:00 - 16:00 : Incompletude et indecidabilites CM01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368713842
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 18 march 2025
+------------------------------
+08:30 - 10:30 : Incompletude et indecidabilites CM01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368714104
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Incompletude et indecidabilites TD01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368714406
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 19 march 2025
+------------------------------
+13:45 - 16:45 : Incompletude et indecidabilites TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368715507
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 24 march 2025
+------------------------------
+14:00 - 16:00 : Incompletude et indecidabilites CM01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368718037
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 25 march 2025
+------------------------------
+08:30 - 10:30 : Incompletude et indecidabilites CM01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368718298
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Incompletude et indecidabilites TD01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368718612
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 26 march 2025
+------------------------------
+13:45 - 16:45 : Incompletude et indecidabilites TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368719684
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 31 march 2025
+------------------------------
+14:00 - 16:00 : Incompletude et indecidabilites CM01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368722199
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 01 april 2025
+------------------------------
+08:30 - 10:30 : Incompletude et indecidabilites CM01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368722477
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Incompletude et indecidabilites TD01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368722769
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 02 april 2025
+------------------------------
+13:45 - 16:45 : Incompletude et indecidabilites TD01
+  Lieu: Condorcet - 302A - (29p)
+  Description: 
+    1739368723858
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 07 april 2025
+------------------------------
+14:00 - 16:00 : Incompletude et indecidabilites CM01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368726306
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 08 april 2025
+------------------------------
+08:30 - 10:30 : Incompletude et indecidabilites CM01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368726560
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Incompletude et indecidabilites TD01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368726839
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 09 april 2025
+------------------------------
+13:45 - 16:45 : Incompletude et indecidabilites TD01
+  Lieu: Condorcet - 302A - (29p)
+  Description: 
+    1739368727891
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Monday 28 april 2025
+------------------------------
+14:00 - 16:00 : Incompletude et indecidabilites CM01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368730587
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 29 april 2025
+------------------------------
+08:30 - 10:30 : Incompletude et indecidabilites CM01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368730813
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+10:45 - 12:45 : Incompletude et indecidabilites TD01
+  Lieu: Gouges - 265 - (30p)
+  Description: 
+    1739368731055
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Wednesday 30 april 2025
+------------------------------
+13:45 - 16:45 : Incompletude et indecidabilites TD01
+  Lieu: Germain - 2013 - (28p)
+  Description: 
+    1739368731971
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 20 may 2025
+------------------------------
+09:00 - 12:00 : Incompletude et indecidabilites EXAMEN
+  Lieu: Halle - 279F - (52p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 13 june 2025
+------------------------------
+13:00 - 17:00 : Algorithmique EXAMEN
+  Lieu: Germain - 2004 -TP- (22p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Tuesday 17 june 2025
+------------------------------
+14:00 - 17:00 : Statistique fondamentale EXAMEN
+  Lieu: Germain - 2014 - (40p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Thursday 19 june 2025
+------------------------------
+14:00 - 17:00 : Logique EXAMEN
+  Lieu: Germain - 2014 - (40p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 20 june 2025
+------------------------------
+09:30 - 12:30 : Complexite EXAMEN
+  Lieu: Germain - 2014 - (40p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+14:00 - 17:00 : Theorie des ensembles EXAMEN
+  Lieu: Germain - 2014 - (40p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]
+
+
+Friday 27 june 2025
+------------------------------
+09:30 - 12:30 : Incompletude et indecidabilites EXAMEN
+  Lieu: Germain - 2014 - (40p)
+  Description: 
+    
+    M1 MATH FONDAMENTALES APPLIQUEES
+    [...]

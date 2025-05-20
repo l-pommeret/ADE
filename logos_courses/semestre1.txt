@@ -1,0 +1,62 @@
+SEMESTER 1 (30 ECTS)
+GUIDING PRINCIPLE FOR THE SEMESTER
+The student must choose:
+
+either the Philosophy of Science UE (course), two Linguistics UEs (courses) and one Logic UE (course) for 12 ECTS (credits)
+or the Philosophy of Science UE (course), two Linguistics UEs (courses), and two Logic UEs (courses) for 9 ECTS each.
+A) Philosophy of Science block
+1 UE of 6 ECTS :
+
++ Introduction to the philosophy of science
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B) Linguistics block
+Choice of 1 or 2 UE of 6 ECTS each among:
+
++ Theoretical syntax
++ Introduction to syntax
++ Semantic analysis
++ Language and its interfaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C) Logic block
+Choice of 1 UE for 12 ECTS or 2 UE for 9 ECTS among:
+
++ Logic (9)
+
++ Logic + Algorithmics (12) : : this UE corresponds to two courses: Logic et Algorithms
+
++ Algorithms Complexity (9): this UE corresponds to two courses: Logic and Complexity.
+
++ Algorithms and Information Theory (9): this UE corresponds to two courses: Algorithms and Information Theory.
