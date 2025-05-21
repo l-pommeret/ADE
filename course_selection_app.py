@@ -653,8 +653,99 @@ def charger_calendrier(chemin_fichier_ics):
         print(f"Erreur lors de l'analyse du fichier ICS: {e}")
         return []
 
-# Stockage des événements personnalisés (en mémoire pour cet exemple)
-CUSTOM_EVENTS = []
+# Chemin de stockage pour les événements personnalisés
+CUSTOM_EVENTS_DIR = 'custom_events'
+CUSTOM_EVENTS_M1 = os.path.join(CUSTOM_EVENTS_DIR, 'M1_custom_events.json')
+CUSTOM_EVENTS_M2 = os.path.join(CUSTOM_EVENTS_DIR, 'M2_custom_events.json')
+
+# S'assurer que le répertoire d'événements personnalisés existe
+os.makedirs(CUSTOM_EVENTS_DIR, exist_ok=True)
+
+def load_custom_events(niveau):
+    """Charge les événements personnalisés depuis un fichier JSON."""
+    file_path = CUSTOM_EVENTS_M1 if niveau == 'm1' else CUSTOM_EVENTS_M2
+    if not os.path.exists(file_path):
+        return []
+    
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return []
+    except Exception as e:
+        print(f"Erreur lors du chargement des événements personnalisés: {e}")
+        return []
+
+def save_custom_events(events, niveau):
+    """Sauvegarde les événements personnalisés dans un fichier JSON."""
+    file_path = CUSTOM_EVENTS_M1 if niveau == 'm1' else CUSTOM_EVENTS_M2
+    try:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(events, f, ensure_ascii=False, indent=4)
+        return True
+    except Exception as e:
+        print(f"Erreur lors de la sauvegarde des événements personnalisés: {e}")
+        return False
+
+def sync_custom_events_to_ics():
+    """Synchronise les événements personnalisés avec les fichiers ICS."""
+    # Créer un fichier JSON au même format que ceux utilisés par les scripts logos_M1.py et logos_M2.py
+    m1_events = load_custom_events('m1')
+    m2_events = load_custom_events('m2')
+    
+    # Chemins des fichiers JSON utilisés par les scripts logos_M*.py
+    m1_custom_events_json = os.path.join('masters', "M1_LOGOS_custom_events.json")
+    m2_custom_events_json = os.path.join('masters', "M2_LOGOS_custom_events.json")
+    
+    # Convertir les événements dans le format attendu par les scripts logos_M*.py
+    m1_events_for_ics = []
+    for event in m1_events:
+        event_converted = {}
+        for key, value in event.items():
+            # Convertir les propriétés spéciales
+            if key in ['isCustom', 'for_m1', 'for_m2']:
+                continue
+            if key == 'id':
+                event_converted['uid'] = value
+            else:
+                event_converted[key] = value
+        
+        # Ajouter les props supplémentaires
+        event_converted['for_m1'] = event.get('for_m1', True)
+        event_converted['for_m2'] = event.get('for_m2', False)
+        
+        m1_events_for_ics.append(event_converted)
+    
+    m2_events_for_ics = []
+    for event in m2_events:
+        event_converted = {}
+        for key, value in event.items():
+            # Convertir les propriétés spéciales
+            if key in ['isCustom', 'for_m1', 'for_m2']:
+                continue
+            if key == 'id':
+                event_converted['uid'] = value
+            else:
+                event_converted[key] = value
+        
+        # Ajouter les props supplémentaires
+        event_converted['for_m1'] = event.get('for_m1', False)
+        event_converted['for_m2'] = event.get('for_m2', True)
+        
+        m2_events_for_ics.append(event_converted)
+    
+    # Sauvegarder les événements au format attendu par les scripts logos_M*.py
+    try:
+        with open(m1_custom_events_json, 'w', encoding='utf-8') as f:
+            json.dump(m1_events_for_ics, f, ensure_ascii=False, indent=4)
+        
+        with open(m2_custom_events_json, 'w', encoding='utf-8') as f:
+            json.dump(m2_events_for_ics, f, ensure_ascii=False, indent=4)
+        
+        return True
+    except Exception as e:
+        print(f"Erreur lors de la synchronisation des événements personnalisés: {e}")
+        return False
 
 # Nouvelle route pour l'emploi du temps
 @app.route('/edt/<niveau>')
@@ -719,8 +810,12 @@ def add_custom_event():
     if not data.get('title') or not data.get('start') or not data.get('end'):
         return jsonify({'success': False, 'message': 'Informations manquantes.'}), 400
     
+    # Déterminer les niveaux affectés
+    for_m1 = data.get('for_m1', True)
+    for_m2 = data.get('for_m2', True)
+    
     # Générer un ID unique
-    event_id = f"custom_{datetime.datetime.now().timestamp()}_{len(CUSTOM_EVENTS)}"
+    event_id = f"custom_{datetime.datetime.now().timestamp()}_{data.get('title', '')}"
     
     # Créer l'événement
     event = {
@@ -730,13 +825,24 @@ def add_custom_event():
         'end': data.get('end'),
         'description': data.get('description', ''),
         'location': data.get('location', ''),
-        'for_m1': data.get('for_m1', True),
-        'for_m2': data.get('for_m2', True),
+        'for_m1': for_m1,
+        'for_m2': for_m2,
         'isCustom': True
     }
     
-    # Ajouter à la liste
-    CUSTOM_EVENTS.append(event)
+    # Ajouter l'événement aux fichiers respectifs
+    if for_m1:
+        events_m1 = load_custom_events('m1')
+        events_m1.append(event)
+        save_custom_events(events_m1, 'm1')
+    
+    if for_m2:
+        events_m2 = load_custom_events('m2')
+        events_m2.append(event)
+        save_custom_events(events_m2, 'm2')
+    
+    # Synchroniser avec les fichiers ICS
+    sync_custom_events_to_ics()
     
     return jsonify({'success': True, 'id': event_id})
 
@@ -753,24 +859,64 @@ def update_custom_event():
     if not event_id or not data.get('title') or not data.get('start') or not data.get('end'):
         return jsonify({'success': False, 'message': 'Informations manquantes.'}), 400
     
-    # Trouver l'événement à mettre à jour
-    for i, event in enumerate(CUSTOM_EVENTS):
-        if event['id'] == event_id:
-            # Mettre à jour l'événement
-            CUSTOM_EVENTS[i] = {
-                'id': event_id,
-                'title': data.get('title'),
-                'start': data.get('start'),
-                'end': data.get('end'),
-                'description': data.get('description', ''),
-                'location': data.get('location', ''),
-                'for_m1': data.get('for_m1', True),
-                'for_m2': data.get('for_m2', True),
-                'isCustom': True
-            }
-            return jsonify({'success': True})
+    # Déterminer les niveaux affectés
+    for_m1 = data.get('for_m1', True)
+    for_m2 = data.get('for_m2', True)
     
-    return jsonify({'success': False, 'message': 'Événement non trouvé.'}), 404
+    # Créer l'événement mis à jour
+    updated_event = {
+        'id': event_id,
+        'title': data.get('title'),
+        'start': data.get('start'),
+        'end': data.get('end'),
+        'description': data.get('description', ''),
+        'location': data.get('location', ''),
+        'for_m1': for_m1,
+        'for_m2': for_m2,
+        'isCustom': True
+    }
+    
+    # Mettre à jour l'événement dans les fichiers respectifs
+    updated = False
+    
+    # Mettre à jour dans M1 si nécessaire
+    events_m1 = load_custom_events('m1')
+    for i, event in enumerate(events_m1):
+        if event.get('id') == event_id:
+            if for_m1:
+                events_m1[i] = updated_event
+            else:
+                events_m1.pop(i)
+            updated = True
+            save_custom_events(events_m1, 'm1')
+            break
+    
+    # Mettre à jour dans M2 si nécessaire
+    events_m2 = load_custom_events('m2')
+    for i, event in enumerate(events_m2):
+        if event.get('id') == event_id:
+            if for_m2:
+                events_m2[i] = updated_event
+            else:
+                events_m2.pop(i)
+            updated = True
+            save_custom_events(events_m2, 'm2')
+            break
+    
+    # Ajouter si l'événement n'existait pas déjà
+    if not updated:
+        if for_m1:
+            events_m1.append(updated_event)
+            save_custom_events(events_m1, 'm1')
+        
+        if for_m2:
+            events_m2.append(updated_event)
+            save_custom_events(events_m2, 'm2')
+    
+    # Synchroniser avec les fichiers ICS
+    sync_custom_events_to_ics()
+    
+    return jsonify({'success': True})
 
 # API pour supprimer un événement personnalisé (admin uniquement)
 @app.route('/api/delete_custom_event', methods=['POST'])
@@ -785,11 +931,30 @@ def delete_custom_event():
     if not event_id:
         return jsonify({'success': False, 'message': 'ID d\'événement manquant.'}), 400
     
-    # Trouver et supprimer l'événement
-    for i, event in enumerate(CUSTOM_EVENTS):
-        if event['id'] == event_id:
-            CUSTOM_EVENTS.pop(i)
-            return jsonify({'success': True})
+    deleted = False
+    
+    # Supprimer de M1
+    events_m1 = load_custom_events('m1')
+    for i, event in enumerate(events_m1):
+        if event.get('id') == event_id:
+            events_m1.pop(i)
+            save_custom_events(events_m1, 'm1')
+            deleted = True
+            break
+    
+    # Supprimer de M2
+    events_m2 = load_custom_events('m2')
+    for i, event in enumerate(events_m2):
+        if event.get('id') == event_id:
+            events_m2.pop(i)
+            save_custom_events(events_m2, 'm2')
+            deleted = True
+            break
+    
+    if deleted:
+        # Synchroniser avec les fichiers ICS
+        sync_custom_events_to_ics()
+        return jsonify({'success': True})
     
     return jsonify({'success': False, 'message': 'Événement non trouvé.'}), 404
 
@@ -799,7 +964,16 @@ def get_all_custom_events():
     if 'username' not in session or not session.get('is_admin', False):
         return jsonify({'error': 'Vous n\'avez pas les droits nécessaires.'}), 403
     
-    return jsonify(CUSTOM_EVENTS)
+    # Combiner les événements des deux niveaux
+    events_m1 = load_custom_events('m1')
+    events_m2 = load_custom_events('m2')
+    
+    # Éliminer les doublons (événements qui existent dans les deux niveaux)
+    all_events = {}
+    for event in events_m1 + events_m2:
+        all_events[event.get('id')] = event
+    
+    return jsonify(list(all_events.values()))
 
 # API pour récupérer les événements personnalisés pour un niveau spécifique
 @app.route('/api/custom_events/<niveau>')
@@ -810,11 +984,8 @@ def get_custom_events(niveau):
     if niveau not in ['m1', 'm2']:
         return jsonify({'error': 'Niveau non valide.'}), 400
     
-    # Filtrer les événements en fonction du niveau
-    if niveau == 'm1':
-        events = [e for e in CUSTOM_EVENTS if e.get('for_m1', True)]
-    else:
-        events = [e for e in CUSTOM_EVENTS if e.get('for_m2', True)]
+    # Charger les événements du niveau spécifié
+    events = load_custom_events(niveau)
     
     return jsonify(events)
 

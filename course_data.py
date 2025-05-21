@@ -6,9 +6,7 @@ Module contenant les données des cours du Master LOGOS.
 COURSES = {
     "semestre1": {
         "title": "SEMESTRE 1 (30 ECTS)",
-        "description": """The student must choose:
-either the Philosophy of Science UE (course), two Linguistics UEs (courses) and one Logic UE (course) for 12 ECTS (credits)
-or the Philosophy of Science UE (course), two Linguistics UEs (courses), and two Logic UEs (courses) for 9 ECTS each.""",
+        "description": """The student must choose at least one course from each block with a total of at least 30 ECTS credits.""",
         "blocks": {
             "A": {
                 "title": "Philosophy of Science block",
@@ -85,21 +83,12 @@ or the Philosophy of Science UE (course), two Linguistics UEs (courses), and two
         },
         "rules": [
             {
-                "min_courses": 4,
+                "min_courses": 3,
                 "min_ects": 30,
                 "block_requirements": {
                     "A": 1,
-                    "B": 2,
+                    "B": 1,
                     "C": 1
-                }
-            },
-            {
-                "min_courses": 5,
-                "min_ects": 30,
-                "block_requirements": {
-                    "A": 1,
-                    "B": 2,
-                    "C": 2
                 }
             }
         ]

@@ -28,6 +28,8 @@
         "password": "pbkdf2:sha256:260000$FzFElstPQjZKWs9W$8e8e4ee7dde8acab88b97a9217a93ee1f6e19ed03d17772a850e86659af498ce",
         "email": "lucpommeret@hotmail.fr",
         "name": "Luc Pommeret",
+        "account_type": "m2",
+        "is_admin": true,
         "selected_courses": {
             "semestre1": [
                 "s1_c1",
@@ -73,5 +75,27 @@
             "semestre3": [],
             "semestre4": []
         }
+    },
+    "Luc": {
+        "username": "Luc",
+        "password": "pbkdf2:sha256:260000$bz5AIWdZAnyFPRfK$5c84fef4e6c129ab7c1570c6f430aa037dd37b6245f2ccf00c9a863bf7864ace",
+        "email": "lp@h.fr",
+        "name": "Luc Pommeret",
+        "account_type": "m1",
+        "is_admin": false,
+        "selected_courses": {
+            "semestre1": [
+                "s1_a1",
+                "s1_b1",
+                "s1_c1",
+                "s1_c4"
+            ],
+            "semestre2": [],
+            "semestre3": [],
+            "semestre4": []
+        },
+        "messages": [],
+        "attendance_years": null,
+        "attended_levels": null
     }
 }
