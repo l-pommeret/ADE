@@ -333,10 +333,23 @@
                             Semestres
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if account_type in ['m1', 'prof'] %}
                             <li><a class="dropdown-item {% if semester_id == 'semestre1' %}active{% endif %}" href="{{ url_for('semester', semester='semestre1') }}">Semestre 1</a></li>
                             <li><a class="dropdown-item {% if semester_id == 'semestre2' %}active{% endif %}" href="{{ url_for('semester', semester='semestre2') }}">Semestre 2</a></li>
+                            {% endif %}
+                            {% if account_type in ['m2', 'prof'] %}
                             <li><a class="dropdown-item {% if semester_id == 'semestre3' %}active{% endif %}" href="{{ url_for('semester', semester='semestre3') }}">Semestre 3</a></li>
                             <li><a class="dropdown-item {% if semester_id == 'semestre4' %}active{% endif %}" href="{{ url_for('semester', semester='semestre4') }}">Semestre 4</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="edtDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Emploi du temps
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="edtDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m1') }}">M1 LOGOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m2') }}">M2 LOGOS</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -243,10 +243,23 @@
                             Semestres
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if account_type in ['m1', 'prof'] %}
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre1') }}">Semestre 1</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre2') }}">Semestre 2</a></li>
+                            {% endif %}
+                            {% if account_type in ['m2', 'prof'] %}
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre3') }}">Semestre 3</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre4') }}">Semestre 4</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="edtDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Emploi du temps
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="edtDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m1') }}">M1 LOGOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m2') }}">M2 LOGOS</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -279,11 +292,22 @@
         
         <div class="dashboard-welcome">
             <h3>Bienvenue, {{ user.name }}!</h3>
-            <p>Vous pouvez consulter et choisir vos cours pour chaque semestre du Master LOGOS.</p>
+            <p>Vous pouvez consulter et choisir vos cours pour chaque semestre du Master LOGOS et consulter votre emploi du temps.</p>
+            <p><a href="{{ url_for('edt', niveau=account_type) }}" class="btn btn-primary mt-2">
+                <i class="fas fa-calendar-alt me-2"></i>Voir mon emploi du temps
+            </a></p>
         </div>
         
+        {% if is_admin %}
+        <div class="alert alert-info">
+            <strong>Mode Administrateur:</strong> En tant que professeur, vous avez accès à tous les semestres et pouvez gérer les cours de tous les étudiants.
+        </div>
+        {% endif %}
+
         <div class="row">
             {% for semester_id, semester_data in courses.items() %}
+            {% if (semester_id.startswith('semestre1') or semester_id.startswith('semestre2')) and account_type in ['m1', 'prof'] 
+               or (semester_id.startswith('semestre3') or semester_id.startswith('semestre4')) and account_type in ['m2', 'prof'] %}
             <div class="col-md-6 col-lg-3">
                 <div class="semester-card">
                     <h5 class="card-title">{{ semester_data.title }}</h5>
@@ -306,6 +330,7 @@
                     <a href="{{ url_for('semester', semester=semester_id) }}" class="btn btn-primary btn-sm">Voir les cours</a>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>

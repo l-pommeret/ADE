@@ -1,5 +1,6 @@
 import os
 import json
+import icalendar
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from course_data import COURSES, USERS
@@ -157,7 +158,13 @@ def validate_selection(username, semester):
 @app.route('/')
 def index():
     if 'username' in session:
-        return redirect(url_for('dashboard'))
+        # Rediriger vers l'emploi du temps correspondant au type de compte
+        account_type = session.get('account_type', 'm1')
+        
+        if account_type == 'm2':
+            return redirect(url_for('edt', niveau='m2'))
+        else:
+            return redirect(url_for('edt', niveau='m1'))
     return render_template('login.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -172,8 +179,16 @@ def login():
         if user and check_password_hash(user['password'], password):
             session['username'] = username
             session['name'] = user['name']
+            session['account_type'] = user.get('account_type', 'm1')
+            session['is_admin'] = user.get('is_admin', False)
             flash('Connexion réussie!', 'success')
-            return redirect(url_for('dashboard'))
+            
+            # Rediriger vers l'emploi du temps correspondant au type de compte
+            account_type = user.get('account_type', 'm1')
+            if account_type == 'm2':
+                return redirect(url_for('edt', niveau='m2'))
+            else:
+                return redirect(url_for('edt', niveau='m1'))
         else:
             flash('Identifiants incorrects.', 'danger')
     
@@ -187,6 +202,7 @@ def register():
         confirm_password = request.form['confirm_password']
         email = request.form['email']
         name = request.form['name']
+        account_type = request.form['account_type']
         
         users = load_users()
         
@@ -201,6 +217,8 @@ def register():
                 'password': hashed_password,
                 'email': email,
                 'name': name,
+                'account_type': account_type,
+                'is_admin': account_type == 'prof',
                 'selected_courses': {
                     'semestre1': [],
                     'semestre2': [],
@@ -209,7 +227,7 @@ def register():
                 }
             }
             save_users()
-            flash('Inscription réussie! Vous pouvez maintenant vous connecter.', 'success')
+            flash('Activation du compte réussie! Vous pouvez maintenant vous connecter.', 'success')
             return redirect(url_for('login'))
     
     return render_template('register.html')
@@ -244,7 +262,9 @@ def dashboard():
     return render_template('dashboard.html', 
                            user=user, 
                            courses=COURSES, 
-                           semester_ects=semester_ects)
+                           semester_ects=semester_ects,
+                           is_admin=user.get('is_admin', False),
+                           account_type=user.get('account_type', 'm1'))
 
 @app.route('/semester/<semester>')
 def semester(semester):
@@ -258,11 +278,24 @@ def semester(semester):
     
     users = load_users()
     user = users.get(session['username'])
+    account_type = user.get('account_type', 'm1')
+    is_admin = user.get('is_admin', False)
+    
+    # Vérification des droits d'accès aux semestres selon le type de compte
+    if not is_admin:
+        if account_type == 'm1' and semester in ['semestre3', 'semestre4']:
+            flash('Vous n\'avez pas accès à ce semestre avec votre type de compte.', 'danger')
+            return redirect(url_for('dashboard'))
+        elif account_type == 'm2' and semester in ['semestre1', 'semestre2']:
+            flash('Vous n\'avez pas accès à ce semestre avec votre type de compte.', 'danger')
+            return redirect(url_for('dashboard'))
     
     return render_template('semester.html', 
                            semester_id=semester,
                            semester_data=COURSES[semester],
-                           user=user)
+                           user=user,
+                           is_admin=is_admin,
+                           account_type=account_type)
 
 @app.route('/api/select_course', methods=['POST'])
 def select_course():
@@ -382,6 +415,106 @@ def update_profile():
         flash('Profil mis à jour avec succès.', 'success')
         return redirect(url_for('profile'))
 
+# Fonction pour charger les événements du calendrier depuis un fichier ICS
+def charger_calendrier(chemin_fichier_ics):
+    """
+    Lit un fichier ICS et retourne les événements du calendrier.
+    
+    Args:
+        chemin_fichier_ics (str): Chemin vers le fichier ICS
+    
+    Returns:
+        list: Liste des événements formatés
+    """
+    try:
+        # Lecture du fichier ICS
+        with open(chemin_fichier_ics, 'rb') as fichier:
+            cal = icalendar.Calendar.from_ical(fichier.read())
+        
+        # Extraction des événements
+        evenements = []
+        for composant in cal.walk():
+            if composant.name == "VEVENT":
+                debut = composant.get('dtstart')
+                if debut:
+                    debut_dt = debut.dt
+                    # Convertir en datetime si c'est une date
+                    if isinstance(debut_dt, datetime.date) and not isinstance(debut_dt, datetime.datetime):
+                        debut_dt = datetime.datetime.combine(debut_dt, datetime.time.min)
+                    
+                    # Gestion des fuseaux horaires (conversion en heure locale et correction du décalage)
+                    if hasattr(debut_dt, 'tzinfo') and debut_dt.tzinfo is not None:
+                        # Correction du décalage horaire - ajout de 2 heures (les horaires sont en UTC)
+                        debut_dt = debut_dt.astimezone(datetime.timezone.utc) + datetime.timedelta(hours=2)
+                        debut_dt = debut_dt.replace(tzinfo=None)
+                    
+                    fin_dt = None
+                    if composant.get('dtend'):
+                        fin_dt = composant.get('dtend').dt
+                        if hasattr(fin_dt, 'tzinfo') and fin_dt.tzinfo is not None:
+                            # Correction du décalage horaire - ajout de 2 heures
+                            fin_dt = fin_dt.astimezone(datetime.timezone.utc) + datetime.timedelta(hours=2)
+                            fin_dt = fin_dt.replace(tzinfo=None)
+                    
+                    # Ajouter l'événement à la liste
+                    evenements.append({
+                        'id': str(composant.get('uid', '')),
+                        'title': str(composant.get('summary', 'Sans titre')),
+                        'start': debut_dt.isoformat(),
+                        'end': fin_dt.isoformat() if fin_dt else None,
+                        'description': str(composant.get('description', '')),
+                        'location': str(composant.get('location', '')),
+                        'allDay': not isinstance(debut_dt, datetime.datetime)
+                    })
+        
+        return evenements
+    
+    except Exception as e:
+        print(f"Erreur lors de l'analyse du fichier ICS: {e}")
+        return []
+
+# Nouvelle route pour l'emploi du temps
+@app.route('/edt/<niveau>')
+def edt(niveau):
+    if 'username' not in session:
+        flash('Veuillez vous connecter pour accéder à cette page.', 'danger')
+        return redirect(url_for('login'))
+    
+    users = load_users()
+    user = users.get(session['username'])
+    account_type = user.get('account_type', 'm1')
+    is_admin = user.get('is_admin', False)
+    
+    if niveau not in ['m1', 'm2']:
+        flash('Niveau non valide.', 'danger')
+        return redirect(url_for('dashboard'))
+    
+    # Le titre de la page dépend du niveau sélectionné
+    title = f"Emploi du temps M{'1' if niveau == 'm1' else '2'} LOGOS"
+    
+    return render_template('edt.html', 
+                          title=title,
+                          niveau=niveau,
+                          user=user,
+                          is_admin=is_admin,
+                          account_type=account_type)
+
+# API pour récupérer les événements de l'emploi du temps
+@app.route('/api/events/<niveau>')
+def get_events(niveau):
+    if 'username' not in session:
+        return jsonify({'error': 'Vous devez être connecté pour accéder à ces données.'}), 401
+    
+    if niveau not in ['m1', 'm2']:
+        return jsonify({'error': 'Niveau non valide.'}), 400
+    
+    # Choisir le bon fichier ICS en fonction du niveau
+    chemin_fichier_ics = os.path.join('masters', f"M{'1' if niveau == 'm1' else '2'}_LOGOS.ics")
+    
+    # Charger les événements du calendrier
+    evenements = charger_calendrier(chemin_fichier_ics)
+    return jsonify(evenements)
+
 # Initialisation de l'application
 if __name__ == '__main__':
     # Si le fichier users.json n'existe pas, créer un utilisateur par défaut
@@ -393,6 +526,8 @@ if __name__ == '__main__':
                 "password": generate_password_hash("admin"),
                 "email": "admin@logos.fr",
                 "name": "Administrateur",
+                "account_type": "prof",
+                "is_admin": True,
                 "selected_courses": {
                     "semestre1": [],
                     "semestre2": [],
@@ -400,11 +535,27 @@ if __name__ == '__main__':
                     "semestre4": []
                 }
             },
-            "etudiant": {
-                "username": "etudiant",
+            "etudiant_m1": {
+                "username": "etudiant_m1",
                 "password": generate_password_hash("etudiant"),
-                "email": "etudiant@logos.fr",
-                "name": "Étudiant Test",
+                "email": "etudiant_m1@logos.fr",
+                "name": "Étudiant M1 Test",
+                "account_type": "m1",
+                "is_admin": False,
+                "selected_courses": {
+                    "semestre1": [],
+                    "semestre2": [],
+                    "semestre3": [],
+                    "semestre4": []
+                }
+            },
+            "etudiant_m2": {
+                "username": "etudiant_m2",
+                "password": generate_password_hash("etudiant"),
+                "email": "etudiant_m2@logos.fr",
+                "name": "Étudiant M2 Test",
+                "account_type": "m2",
+                "is_admin": False,
                 "selected_courses": {
                     "semestre1": [],
                     "semestre2": [],

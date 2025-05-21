@@ -61,12 +61,14 @@ if __name__ == "__main__":
     # Liste des fichiers sources
     source_files = [
         "M1_MFA.ics",
+        "M2_LMFI.ics",
         # Ajoutez d'autres fichiers ICS si nécessaire
     ]
     
     # Définir les filtres pour chaque fichier
     # Format: nom_fichier: [liste de mots-clés]
     course_filters = {
+        "M2_LMFI.ics": ["Cours préliminaire de logique"],
         "M1_MFA.ics": ["Logique", "Algorithmique", "Complexite", "Incompletude et indecidabilites", "Theorie des ensembles", "Statistique fondamentale"],
 
         # Ajoutez d'autres filtres si nécessaire

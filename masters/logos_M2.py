@@ -69,7 +69,7 @@ if __name__ == "__main__":
     # Définir les filtres pour chaque fichier
     # Format: nom_fichier: [liste de mots-clés]
     course_filters = {
-        "M2_LMFI.ics": ["Theorie des modeles", "Theorie de la demonstration", "Theorie categories", "Theorie des ensembles", "Calculabilite et incompletude", "Programmation fonctionnelle", "Theorie de la  calculabilite"],
+        "M2_LMFI.ics": ["Cours préliminaire de logique", "Theorie des modeles", "Theorie de la demonstration", "Theorie categories", "Theorie des ensembles", "Calculabilite et incompletude", "Programmation fonctionnelle", "Theorie de la  calculabilite"],
         "M2_MPRI.ics": ["Calculs sur les reels", "Complexite randomisee"],  
         "M2_MO.ics": ["Introduction au machine learning", "Deep learning"],
         # Ajoutez d'autres filtres si nécessaire
