@@ -302,7 +302,7 @@ either 5 UEs (courses) for 6 ECTS (credits), or 3 UEs (courses) for 6 ECTS (cred
                     {
                         "id": "s3_d2",
                         "title": "Machine Learning",
-                        "ects": 6,
+                        "ects": 12,
                         "description": "Machine Learning"
                     },
                     {
@@ -472,13 +472,49 @@ or an internship of at least four months counting for 30 ECTS ("the internship i
                         "id": "s4_e1",
                         "title": "Thesis",
                         "ects": 18,
-                        "description": "Writing of a dissertation"
+                        "description": "Writing of a dissertation",
+                        "requires_info": True,
+                        "additional_fields": [
+                            {
+                                "name": "thesis_title",
+                                "label": "Titre du mémoire",
+                                "required": True
+                            },
+                            {
+                                "name": "thesis_subject",
+                                "label": "Sujet/Description",
+                                "required": True
+                            },
+                            {
+                                "name": "thesis_supervisor",
+                                "label": "Directeur(s) de mémoire",
+                                "required": True
+                            }
+                        ]
                     },
                     {
                         "id": "s4_e2",
                         "title": "Internship",
                         "ects": 30,
-                        "description": "Internship of at least four months"
+                        "description": "Internship of at least four months",
+                        "requires_info": True,
+                        "additional_fields": [
+                            {
+                                "name": "internship_location",
+                                "label": "Lieu du stage",
+                                "required": True
+                            },
+                            {
+                                "name": "internship_subject",
+                                "label": "Sujet du stage",
+                                "required": True
+                            },
+                            {
+                                "name": "internship_supervisor",
+                                "label": "Directeur(s) de stage",
+                                "required": True
+                            }
+                        ]
                     }
                 ]
             }

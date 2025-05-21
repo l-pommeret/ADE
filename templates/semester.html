@@ -385,6 +385,117 @@
         
         <div class="row">
             <div class="col-md-8">
+                {% if semester_id == 'semestre4' %}
+                <!-- Bloc E (Mémoire/Stage) en premier pour le semestre 4 -->
+                <div class="block-section">
+                    <h3 class="block-title">{{ semester_data.blocks['E'].title }}</h3>
+                    <div class="block-description">{{ semester_data.blocks['E'].description }}</div>
+                    
+                    <div class="course-list">
+                        {% for course in semester_data.blocks['E'].courses %}
+                        <div class="course-card {% if course.id in user.selected_courses[semester_id] %}selected{% endif %}" id="course-{{ course.id }}">
+                            <div class="course-title">
+                                <span>{{ course.title }}</span>
+                                <span class="course-ects">{{ course.ects }} ECTS</span>
+                            </div>
+                            <div class="course-description">{{ course.description }}</div>
+                            <div class="course-action">
+                                {% if course.id in user.selected_courses[semester_id] %}
+                                <button class="btn btn-sm btn-deselect" onclick="deselectCourse('{{ semester_id }}', '{{ course.id }}')">
+                                    <i class="fas fa-times me-1"></i> Retirer
+                                </button>
+                                {% else %}
+                                <button class="btn btn-sm btn-select" onclick="selectCourseWithInfo('{{ semester_id }}', '{{ course.id }}')">
+                                    <i class="fas fa-plus me-1"></i> Sélectionner
+                                </button>
+                                {% endif %}
+                            </div>
+                            
+                            {% if course.id in user.selected_courses[semester_id] and course.requires_info %}
+                            <div class="course-additional-info mt-3 p-3 bg-light rounded">
+                                <h5>Informations supplémentaires</h5>
+                                
+                                {% set has_info = false %}
+                                {% if 'course_details' in user and semester_id in user['course_details'] and course.id in user['course_details'][semester_id] %}
+                                    {% set has_info = true %}
+                                    {% set info = user['course_details'][semester_id][course.id] %}
+                                {% endif %}
+                                
+                                {% if course.id == 's4_e1' %} <!-- Mémoire -->
+                                <div class="mb-2">
+                                    <strong>Titre du mémoire:</strong> 
+                                    <span>{{ info.thesis_title if has_info else "Non renseigné" }}</span>
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Sujet/Description:</strong> 
+                                    <span>{{ info.thesis_subject if has_info else "Non renseigné" }}</span>
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Directeur(s) de mémoire:</strong> 
+                                    <span>{{ info.thesis_supervisor if has_info else "Non renseigné" }}</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary mt-2" onclick="editCourseInfo('{{ semester_id }}', '{{ course.id }}')">
+                                    <i class="fas fa-edit me-1"></i> Modifier les informations
+                                </button>
+                                {% elif course.id == 's4_e2' %} <!-- Stage -->
+                                <div class="mb-2">
+                                    <strong>Lieu du stage:</strong> 
+                                    <span>{{ info.internship_location if has_info else "Non renseigné" }}</span>
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Sujet du stage:</strong> 
+                                    <span>{{ info.internship_subject if has_info else "Non renseigné" }}</span>
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Directeur(s) de stage:</strong> 
+                                    <span>{{ info.internship_supervisor if has_info else "Non renseigné" }}</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary mt-2" onclick="editCourseInfo('{{ semester_id }}', '{{ course.id }}')">
+                                    <i class="fas fa-edit me-1"></i> Modifier les informations
+                                </button>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <!-- Autres blocs pour le semestre 4 -->
+                {% for block_id, block_data in semester_data.blocks.items() %}
+                {% if block_id != 'E' %}
+                <div class="block-section">
+                    <h3 class="block-title">{{ block_data.title }}</h3>
+                    <div class="block-description">{{ block_data.description }}</div>
+                    
+                    <div class="course-list">
+                        {% for course in block_data.courses %}
+                        <div class="course-card {% if course.id in user.selected_courses[semester_id] %}selected{% endif %}" id="course-{{ course.id }}">
+                            <div class="course-title">
+                                <span>{{ course.title }}</span>
+                                <span class="course-ects">{{ course.ects }} ECTS</span>
+                            </div>
+                            <div class="course-description">{{ course.description }}</div>
+                            <div class="course-action">
+                                {% if course.id in user.selected_courses[semester_id] %}
+                                <button class="btn btn-sm btn-deselect" onclick="deselectCourse('{{ semester_id }}', '{{ course.id }}')">
+                                    <i class="fas fa-times me-1"></i> Retirer
+                                </button>
+                                {% else %}
+                                <button class="btn btn-sm btn-select" onclick="selectCourse('{{ semester_id }}', '{{ course.id }}')">
+                                    <i class="fas fa-plus me-1"></i> Sélectionner
+                                </button>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                
+                {% else %}
+                <!-- Affichage normal pour les autres semestres -->
                 {% for block_id, block_data in semester_data.blocks.items() %}
                 <div class="block-section">
                     <h3 class="block-title">{{ block_data.title }}</h3>
@@ -414,6 +525,7 @@
                     </div>
                 </div>
                 {% endfor %}
+                {% endif %}
             </div>
             
             <div class="col-md-4">
@@ -482,8 +594,45 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Modal pour les informations supplémentaires -->
+    <div class="modal fade" id="courseInfoModal" tabindex="-1" aria-labelledby="courseInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseInfoModalLabel">Informations supplémentaires</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="courseInfoForm">
+                        <input type="hidden" id="info_semester" name="semester">
+                        <input type="hidden" id="info_course_id" name="course_id">
+                        <div id="courseInfoFields"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="submitCourseInfo">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script>
-        // Fonction pour sélectionner un cours
+        // Variables globales pour stocker les informations du cours en cours d'édition
+        let currentCourseInfo = null;
+        let courseInfoModal = null;
+        
+        // Initialisation de la modal au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            courseInfoModal = new bootstrap.Modal(document.getElementById('courseInfoModal'));
+            
+            // Ajouter l'événement de soumission du formulaire
+            document.getElementById('submitCourseInfo').addEventListener('click', function() {
+                submitAdditionalInfo();
+            });
+        });
+        
+        // Fonction pour sélectionner un cours standard
         function selectCourse(semester, courseId) {
             fetch('/api/select_course', {
                 method: 'POST',
@@ -510,6 +659,197 @@
             .catch(error => {
                 console.error('Erreur:', error);
                 alert('Une erreur est survenue lors de la sélection du cours.');
+            });
+        }
+        
+        // Fonction pour sélectionner un cours avec informations supplémentaires
+        function selectCourseWithInfo(semester, courseId) {
+            fetch('/api/select_course', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    semester: semester,
+                    course_id: courseId
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Mettre à jour l'interface et recharger la page
+                    window.location.reload();
+                } else if (data.requires_info) {
+                    // Afficher le formulaire pour les informations supplémentaires
+                    showCourseInfoForm(semester, courseId, data.fields);
+                } else {
+                    // Afficher le message d'erreur
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue lors de la sélection du cours.');
+            });
+        }
+        
+        // Fonction pour afficher le formulaire d'informations supplémentaires
+        function showCourseInfoForm(semester, courseId, fields) {
+            // Stocker les informations du cours en cours d'édition
+            currentCourseInfo = {
+                semester: semester,
+                courseId: courseId,
+                fields: fields
+            };
+            
+            // Remplir le formulaire avec les champs nécessaires
+            document.getElementById('info_semester').value = semester;
+            document.getElementById('info_course_id').value = courseId;
+            
+            const fieldsContainer = document.getElementById('courseInfoFields');
+            fieldsContainer.innerHTML = '';
+            
+            // Générer les champs de formulaire en fonction du type de cours (mémoire ou stage)
+            if (courseId === 's4_e1') { // Mémoire
+                // Titre du mémoire
+                const titleField = document.createElement('div');
+                titleField.className = 'mb-3';
+                titleField.innerHTML = `
+                    <label for="thesis_title" class="form-label">Titre du mémoire</label>
+                    <input type="text" class="form-control" id="thesis_title" name="thesis_title" required>
+                `;
+                fieldsContainer.appendChild(titleField);
+                
+                // Sujet du mémoire
+                const subjectField = document.createElement('div');
+                subjectField.className = 'mb-3';
+                subjectField.innerHTML = `
+                    <label for="thesis_subject" class="form-label">Sujet/Description</label>
+                    <textarea class="form-control" id="thesis_subject" name="thesis_subject" rows="3" required></textarea>
+                `;
+                fieldsContainer.appendChild(subjectField);
+                
+                // Directeur de mémoire
+                const supervisorField = document.createElement('div');
+                supervisorField.className = 'mb-3';
+                supervisorField.innerHTML = `
+                    <label for="thesis_supervisor" class="form-label">Directeur(s) de mémoire</label>
+                    <input type="text" class="form-control" id="thesis_supervisor" name="thesis_supervisor" required>
+                `;
+                fieldsContainer.appendChild(supervisorField);
+            } 
+            else if (courseId === 's4_e2') { // Stage
+                // Lieu du stage
+                const locationField = document.createElement('div');
+                locationField.className = 'mb-3';
+                locationField.innerHTML = `
+                    <label for="internship_location" class="form-label">Lieu du stage</label>
+                    <input type="text" class="form-control" id="internship_location" name="internship_location" required>
+                `;
+                fieldsContainer.appendChild(locationField);
+                
+                // Sujet du stage
+                const subjectField = document.createElement('div');
+                subjectField.className = 'mb-3';
+                subjectField.innerHTML = `
+                    <label for="internship_subject" class="form-label">Sujet du stage</label>
+                    <textarea class="form-control" id="internship_subject" name="internship_subject" rows="3" required></textarea>
+                `;
+                fieldsContainer.appendChild(subjectField);
+                
+                // Directeur de stage
+                const supervisorField = document.createElement('div');
+                supervisorField.className = 'mb-3';
+                supervisorField.innerHTML = `
+                    <label for="internship_supervisor" class="form-label">Directeur(s) de stage</label>
+                    <input type="text" class="form-control" id="internship_supervisor" name="internship_supervisor" required>
+                `;
+                fieldsContainer.appendChild(supervisorField);
+            }
+            
+            // Afficher la modal
+            courseInfoModal.show();
+        }
+        
+        // Fonction pour éditer les informations d'un cours déjà sélectionné
+        function editCourseInfo(semester, courseId) {
+            // Récupérer les informations actuelles
+            fetch(`/api/course_details/${semester}/${courseId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Afficher le formulaire avec les informations pré-remplies
+                    showCourseInfoForm(semester, courseId, data.course_info.additional_fields);
+                    
+                    // Pré-remplir les champs avec les informations existantes
+                    if (courseId === 's4_e1' && data.additional_info) { // Mémoire
+                        document.getElementById('thesis_title').value = data.additional_info.thesis_title || '';
+                        document.getElementById('thesis_subject').value = data.additional_info.thesis_subject || '';
+                        document.getElementById('thesis_supervisor').value = data.additional_info.thesis_supervisor || '';
+                    } 
+                    else if (courseId === 's4_e2' && data.additional_info) { // Stage
+                        document.getElementById('internship_location').value = data.additional_info.internship_location || '';
+                        document.getElementById('internship_subject').value = data.additional_info.internship_subject || '';
+                        document.getElementById('internship_supervisor').value = data.additional_info.internship_supervisor || '';
+                    }
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue lors de la récupération des informations.');
+            });
+        }
+        
+        // Fonction pour soumettre les informations supplémentaires
+        function submitAdditionalInfo() {
+            // Récupérer les valeurs du formulaire
+            const semester = document.getElementById('info_semester').value;
+            const courseId = document.getElementById('info_course_id').value;
+            
+            let additionalInfo = {};
+            
+            if (courseId === 's4_e1') { // Mémoire
+                additionalInfo = {
+                    thesis_title: document.getElementById('thesis_title').value,
+                    thesis_subject: document.getElementById('thesis_subject').value,
+                    thesis_supervisor: document.getElementById('thesis_supervisor').value
+                };
+            } 
+            else if (courseId === 's4_e2') { // Stage
+                additionalInfo = {
+                    internship_location: document.getElementById('internship_location').value,
+                    internship_subject: document.getElementById('internship_subject').value,
+                    internship_supervisor: document.getElementById('internship_supervisor').value
+                };
+            }
+            
+            // Envoyer les informations au serveur
+            fetch('/api/select_course', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    semester: semester,
+                    course_id: courseId,
+                    additional_info: additionalInfo
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Fermer la modal et recharger la page
+                    courseInfoModal.hide();
+                    window.location.reload();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue lors de l\'enregistrement des informations.');
             });
         }
         

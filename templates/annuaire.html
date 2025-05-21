@@ -515,7 +515,39 @@
                                     <div class="semester-title">Semestre 4</div>
                                     <ul class="course-list">
                                         {% for course in user_item.selected_courses.semestre4 %}
-                                        <li class="course-item">{{ course.name }} <span class="ects">({{ course.ects }} ECTS)</span></li>
+                                        <li class="course-item">
+                                            {{ course.name }} <span class="ects">({{ course.ects }} ECTS)</span>
+                                            
+                                            {% if course.id == 's4_e1' and course.additional_info %}
+                                            <!-- Informations supplémentaires pour le mémoire -->
+                                            <div class="additional-info-box mt-2 mb-2 p-2 border-start border-3 border-primary ps-3">
+                                                {% if course.additional_info.thesis_title %}
+                                                <div><strong>Titre du mémoire:</strong> {{ course.additional_info.thesis_title }}</div>
+                                                {% endif %}
+                                                {% if course.additional_info.thesis_subject %}
+                                                <div><strong>Sujet:</strong> {{ course.additional_info.thesis_subject }}</div>
+                                                {% endif %}
+                                                {% if course.additional_info.thesis_supervisor %}
+                                                <div><strong>Directeur(s):</strong> {{ course.additional_info.thesis_supervisor }}</div>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+                                            
+                                            {% if course.id == 's4_e2' and course.additional_info %}
+                                            <!-- Informations supplémentaires pour le stage -->
+                                            <div class="additional-info-box mt-2 mb-2 p-2 border-start border-3 border-success ps-3">
+                                                {% if course.additional_info.internship_location %}
+                                                <div><strong>Lieu du stage:</strong> {{ course.additional_info.internship_location }}</div>
+                                                {% endif %}
+                                                {% if course.additional_info.internship_subject %}
+                                                <div><strong>Sujet:</strong> {{ course.additional_info.internship_subject }}</div>
+                                                {% endif %}
+                                                {% if course.additional_info.internship_supervisor %}
+                                                <div><strong>Directeur(s):</strong> {{ course.additional_info.internship_supervisor }}</div>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+                                        </li>
                                         {% endfor %}
                                     </ul>
                                 {% endif %}

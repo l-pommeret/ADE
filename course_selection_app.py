@@ -62,6 +62,10 @@ def can_select_course(username, semester, course_id):
             if len(user['selected_courses'][semester]) >= 3 and course_id != 's4_e1':
                 return False, "Vous ne pouvez pas sélectionner plus de 2 cours en plus du mémoire"
             
+            # Vérifier que le nouveau cours n'est pas du bloc E (sauf s'il s'agit du mémoire)
+            if block_id == 'E' and course_id != 's4_e1':
+                return False, "Vous ne pouvez pas sélectionner un autre cours du bloc mémoire/stage"
+                
             # Vérifier que les cours viennent de blocs différents
             selected_blocks = []
             for selected_id in user['selected_courses'][semester]:
@@ -76,7 +80,7 @@ def can_select_course(username, semester, course_id):
                             break
             
             # Vérifier si le nouveau cours appartient à un bloc déjà sélectionné
-            if block_id in selected_blocks and block_id != 'E':
+            if block_id in selected_blocks:
                 return False, "Vous devez choisir des cours de blocs différents"
         
         # Si c'est le premier choix et qu'il s'agit du stage
@@ -113,7 +117,36 @@ def validate_selection(username, semester):
     # Calculer le nombre total d'ECTS
     total_ects = sum(course['ects'] for course in selected_course_details)
     
-    # Vérifier le nombre minimum de cours et d'ECTS
+    # Règles spécifiques pour le semestre 4
+    if semester == 'semestre4':
+        # Vérifier si l'étudiant a choisi le stage (itinéraire stage)
+        if 's4_e2' in selected_courses:
+            if len(selected_courses) > 1:
+                return False, "En itinéraire stage, vous ne pouvez pas sélectionner d'autres cours"
+            return True, f"Sélection valide (itinéraire stage). Total ECTS: {total_ects}"
+        
+        # Vérifier si l'étudiant a choisi le mémoire (itinéraire classique)
+        elif 's4_e1' in selected_courses:
+            # Vérifier qu'il a exactement 2 cours en plus du mémoire
+            if len(selected_courses) != 3:
+                return False, "En itinéraire classique, vous devez sélectionner exactement 2 cours en plus du mémoire"
+            
+            # Collecter les blocs des cours sélectionnés (hors mémoire)
+            selected_blocks = set()
+            for course in selected_course_details:
+                if course['id'] != 's4_e1':  # Ignorer le mémoire
+                    selected_blocks.add(course['block_id'])
+            
+            # Vérifier que les blocs sont différents et ne contiennent pas E
+            if len(selected_blocks) != 2 or 'E' in selected_blocks:
+                return False, "Vous devez choisir 2 cours de blocs différents (A, B, C ou D)"
+            
+            return True, f"Sélection valide (itinéraire classique). Total ECTS: {total_ects}"
+        
+        else:
+            return False, "Vous devez choisir soit le mémoire (itinéraire classique), soit le stage (itinéraire stage)"
+    
+    # Vérification standard pour les autres semestres
     valid_rule = None
     for rule in COURSES[semester]['rules']:
         # Vérifier le nombre de cours
@@ -264,10 +297,31 @@ def dashboard():
                         break
         semester_ects[semester] = total_ects
     
+    # Récupérer les informations détaillées des cours sélectionnés
+    selected_courses_details = {}
+    for semester, course_ids in user['selected_courses'].items():
+        selected_courses_details[semester] = []
+        for course_id in course_ids:
+            course_detail = {"id": course_id, "additional_info": {}}
+            
+            # Récupérer les informations de base du cours
+            for block in COURSES[semester]['blocks'].values():
+                for course in block['courses']:
+                    if course['id'] == course_id:
+                        course_detail.update(course)
+                        break
+            
+            # Récupérer les informations supplémentaires si disponibles
+            if 'course_details' in user and semester in user['course_details'] and course_id in user['course_details'][semester]:
+                course_detail["additional_info"] = user['course_details'][semester][course_id]
+            
+            selected_courses_details[semester].append(course_detail)
+    
     return render_template('dashboard.html', 
                            user=user, 
                            courses=COURSES, 
                            semester_ects=semester_ects,
+                           selected_courses_details=selected_courses_details,
                            is_admin=user.get('is_admin', False),
                            account_type=user.get('account_type', 'm1'))
 
@@ -295,10 +349,29 @@ def semester(semester):
             flash('Vous n\'avez pas accès à ce semestre avec votre type de compte.', 'danger')
             return redirect(url_for('dashboard'))
     
+    # Récupérer les informations détaillées des cours sélectionnés pour ce semestre
+    selected_courses_details = []
+    for course_id in user['selected_courses'].get(semester, []):
+        course_detail = {"id": course_id, "additional_info": {}}
+        
+        # Récupérer les informations de base du cours
+        for block in COURSES[semester]['blocks'].values():
+            for course in block['courses']:
+                if course['id'] == course_id:
+                    course_detail.update(course)
+                    break
+        
+        # Récupérer les informations supplémentaires si disponibles
+        if 'course_details' in user and semester in user['course_details'] and course_id in user['course_details'][semester]:
+            course_detail["additional_info"] = user['course_details'][semester][course_id]
+        
+        selected_courses_details.append(course_detail)
+    
     return render_template('semester.html', 
                            semester_id=semester,
                            semester_data=COURSES[semester],
                            user=user,
+                           selected_courses_details=selected_courses_details,
                            is_admin=is_admin,
                            account_type=account_type)
 
@@ -310,6 +383,7 @@ def select_course():
     data = request.json
     semester = data.get('semester')
     course_id = data.get('course_id')
+    additional_info = data.get('additional_info', {})
     username = session['username']
     
     users = load_users()
@@ -320,8 +394,40 @@ def select_course():
     if not can_select:
         return jsonify({'success': False, 'message': message})
     
-    # Ajouter le cours à la sélection de l'utilisateur
+    # Vérifier si des informations supplémentaires sont requises pour ce cours
+    course_info = None
+    for block in COURSES[semester]['blocks'].values():
+        for course in block['courses']:
+            if course['id'] == course_id:
+                course_info = course
+                break
+        if course_info:
+            break
+    
+    # Vérifier si des informations supplémentaires sont requises et fournies
+    if course_info and course_info.get('requires_info', False):
+        if not additional_info:
+            # Si aucune information supplémentaire n'est fournie
+            required_fields = [field['name'] for field in course_info.get('additional_fields', []) if field.get('required', False)]
+            if required_fields:
+                return jsonify({
+                    'success': False,
+                    'message': 'Informations supplémentaires requises',
+                    'requires_info': True,
+                    'fields': course_info.get('additional_fields', [])
+                })
+    
+    # Ajouter le cours et les informations supplémentaires à la sélection de l'utilisateur
     user['selected_courses'][semester].append(course_id)
+    
+    # Stocker les informations supplémentaires si fournies
+    if additional_info and course_info and course_info.get('requires_info', False):
+        if 'course_details' not in user:
+            user['course_details'] = {}
+        if semester not in user['course_details']:
+            user['course_details'][semester] = {}
+        user['course_details'][semester][course_id] = additional_info
+    
     save_users()
     
     return jsonify({'success': True, 'message': 'Cours sélectionné'})
@@ -348,10 +454,18 @@ def deselect_course():
         # Si c'est le mémoire/stage, il faut vérifier les implications
         if course_id == 's4_e1' or course_id == 's4_e2':
             user['selected_courses'][semester] = []  # Réinitialiser toute la sélection du semestre 4
+            
+            # Supprimer également les informations supplémentaires liées au mémoire/stage
+            if 'course_details' in user and semester in user['course_details']:
+                user['course_details'][semester] = {}
     
     # Retirer le cours de la sélection
     if course_id in user['selected_courses'][semester]:
         user['selected_courses'][semester].remove(course_id)
+    
+    # Supprimer les informations supplémentaires liées à ce cours
+    if 'course_details' in user and semester in user['course_details'] and course_id in user['course_details'][semester]:
+        del user['course_details'][semester][course_id]
     
     save_users()
     
@@ -369,6 +483,46 @@ def api_validate_selection():
     is_valid, message = validate_selection(username, semester)
     
     return jsonify({'success': is_valid, 'message': message})
+
+@app.route('/api/course_details/<semester>/<course_id>', methods=['GET'])
+def get_course_details(semester, course_id):
+    if 'username' not in session:
+        return jsonify({'success': False, 'message': 'Veuillez vous connecter'})
+    
+    username = session['username']
+    users = load_users()
+    user = users.get(username)
+    
+    # Vérifier si le cours est dans la sélection de l'utilisateur
+    if course_id not in user['selected_courses'].get(semester, []):
+        return jsonify({'success': False, 'message': 'Ce cours n\'est pas dans votre sélection'})
+    
+    # Récupérer les informations du cours
+    course_info = None
+    for block in COURSES[semester]['blocks'].values():
+        for course in block['courses']:
+            if course['id'] == course_id:
+                course_info = course
+                break
+        if course_info:
+            break
+    
+    if not course_info:
+        return jsonify({'success': False, 'message': 'Cours non trouvé'})
+    
+    # Récupérer les détails supplémentaires (si disponibles)
+    additional_info = {}
+    if 'course_details' in user and semester in user['course_details'] and course_id in user['course_details'][semester]:
+        additional_info = user['course_details'][semester][course_id]
+    
+    # Préparer la réponse
+    response = {
+        'success': True,
+        'course_info': course_info,
+        'additional_info': additional_info
+    }
+    
+    return jsonify(response)
 
 @app.route('/profile')
 def profile():
@@ -447,15 +601,30 @@ def annuaire():
         for semester, course_ids in user_data.get('selected_courses', {}).items():
             selected_courses_info[semester] = []
             for course_id in course_ids:
+                course_info = {
+                    'id': course_id,
+                    'name': 'Cours sans titre',
+                    'ects': 0,
+                    'additional_info': {}
+                }
+                
+                # Récupérer les informations de base du cours
                 for block in COURSES[semester]['blocks'].values():
                     for course in block['courses']:
                         if course['id'] == course_id:
-                            selected_courses_info[semester].append({
-                                'id': course_id,
-                                'name': course.get('title', 'Cours sans titre'),  # Utiliser 'title' au lieu de 'name'
-                                'ects': course['ects']
-                            })
+                            course_info['name'] = course.get('title', 'Cours sans titre')
+                            course_info['ects'] = course['ects']
+                            course_info['requires_info'] = course.get('requires_info', False)
+                            course_info['additional_fields'] = course.get('additional_fields', [])
                             break
+                
+                # Récupérer les informations supplémentaires si disponibles
+                if ('course_details' in user_data and 
+                    semester in user_data['course_details'] and 
+                    course_id in user_data['course_details'][semester]):
+                    course_info['additional_info'] = user_data['course_details'][semester][course_id]
+                
+                selected_courses_info[semester].append(course_info)
         
         # Créer l'entrée utilisateur pour l'annuaire
         annuaire_users.append({
@@ -465,7 +634,8 @@ def annuaire():
             'account_type': user_data.get('account_type', 'm1'),
             'is_admin': user_data.get('is_admin', False),
             'attendance_years': user_data.get('attendance_years', []),
-            'selected_courses': selected_courses_info
+            'selected_courses': selected_courses_info,
+            'course_details': user_data.get('course_details', {})
         })
     
     # Tri par type de compte et nom
