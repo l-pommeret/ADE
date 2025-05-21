@@ -41,23 +41,36 @@
             "semestre4": []
         }
     },
-    "J\u00e9r\u00f4me Evrard": {
-        "username": "J\u00e9r\u00f4me Evrard",
-        "password": "pbkdf2:sha256:260000$1KmIF1MdvgGB8K9L$d6545272bb81bd8cd99606eee8df64d86b83ed399ea62d06811dc94b10e88f17",
-        "email": "evrard@gmail.com",
-        "name": "J\u00e9r\u00f4me Evrard",
-        "account_type": "m2",
+    "Narada": {
+        "username": "Narada",
+        "password": "pbkdf2:sha256:260000$MewsRmurCptjqqCm$789d1f21ac4608078e6e78a8a11254fc5889e6579a23b724bd221c48c8709cf8",
+        "email": "narada.maugin@etu.u-paris.fr",
+        "name": "Narada Maugin",
+        "account_type": "m1",
         "is_admin": false,
+        "selected_courses": {
+            "semestre1": [
+                "s1_a1",
+                "s1_b2",
+                "s1_c1",
+                "s1_c4"
+            ],
+            "semestre2": [],
+            "semestre3": [],
+            "semestre4": []
+        }
+    },
+    "Michel": {
+        "username": "Michel",
+        "password": "pbkdf2:sha256:260000$pOXKFICkAqnktmuo$d0dbf855a0a62b649ab64fb5c947e42492f2482b7510fa49d779bd613a460a1c",
+        "email": "mdr@irif.fr",
+        "name": "Michel de Rougemont",
+        "account_type": "prof",
+        "is_admin": true,
         "selected_courses": {
             "semestre1": [],
             "semestre2": [],
-            "semestre3": [
-                "s3_a1",
-                "s3_c1",
-                "s3_d2",
-                "s3_b3",
-                "s3_c2"
-            ],
+            "semestre3": [],
             "semestre4": []
         }
     }

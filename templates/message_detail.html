@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de bord - Choix de cours Master LOGOS</title>
+    <title>Message - Master LOGOS</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -92,72 +92,87 @@
             color: #8a1639;
         }
         
-        .dashboard-container {
-            max-width: 1200px;
+        .message-container {
+            max-width: 800px;
             margin: 30px auto;
             padding: 0 15px;
         }
         
-        .dashboard-title {
-            margin-bottom: 30px;
-            color: #333;
-        }
-        
-        .dashboard-welcome {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-        }
-        
-        .semester-card {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .semester-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .semester-card .card-title {
-            color: #8a1639;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .semester-card .card-text {
+        .message-header {
             margin-bottom: 20px;
-            color: #666;
         }
         
-        .semester-card .btn-primary {
+        .message-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .message-meta {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .message-subject {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .message-from {
+            margin-bottom: 5px;
+        }
+        
+        .message-from span {
+            font-weight: 500;
+        }
+        
+        .message-time {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .message-content {
+            padding-top: 10px;
+            line-height: 1.7;
+        }
+        
+        .message-actions {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn-reply {
             background-color: #8a1639;
             border-color: #8a1639;
+            color: white;
         }
         
-        .semester-card .btn-primary:hover {
-            background-color: #761433;
-            border-color: #761433;
+        .btn-reply:hover {
+            background-color: #76122f;
+            border-color: #76122f;
+            color: white;
         }
         
-        .semester-card .progress {
-            height: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
+        .btn-back {
+            color: #333;
+            background-color: #f5f5f5;
+            border-color: #ddd;
         }
         
-        .semester-card .progress-bar {
+        .btn-back:hover {
+            background-color: #e9e9e9;
+            border-color: #ccc;
+        }
+        
+        .badge-unread {
             background-color: #8a1639;
-        }
-        
-        .semester-card .progress-text {
-            font-size: 14px;
-            color: #666;
+            color: white;
         }
         
         .footer {
@@ -236,18 +251,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ url_for('dashboard') }}">Tableau de bord</a>
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Tableau de bord</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Semestres
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% if account_type in ['m1', 'prof'] %}
+                            {% if user.account_type in ['m1', 'prof', 'alumni'] %}
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre1') }}">Semestre 1</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre2') }}">Semestre 2</a></li>
                             {% endif %}
-                            {% if account_type in ['m2', 'prof'] %}
+                            {% if user.account_type in ['m2', 'prof', 'alumni'] %}
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre3') }}">Semestre 3</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre4') }}">Semestre 4</a></li>
                             {% endif %}
@@ -263,7 +278,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('messages') }}">Messagerie</a>
+                        <a class="nav-link active" href="{{ url_for('messages') }}">
+                            Messagerie
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('annuaire') }}">Annuaire</a>
@@ -285,8 +302,12 @@
         </div>
     </nav>
     
-    <div class="dashboard-container">
-        <h1 class="dashboard-title">Tableau de bord</h1>
+    <div class="message-container">
+        <div class="message-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3">Message</h1>
+            </div>
+        </div>
         
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -296,48 +317,83 @@
             {% endif %}
         {% endwith %}
         
-        <div class="dashboard-welcome">
-            <h3>Bienvenue, {{ user.name }}!</h3>
-            <p>Vous pouvez consulter et choisir vos cours pour chaque semestre du Master LOGOS et consulter votre emploi du temps.</p>
-            <p><a href="{{ url_for('edt', niveau=account_type) }}" class="btn btn-primary mt-2">
-                <i class="fas fa-calendar-alt me-2"></i>Voir mon emploi du temps
-            </a></p>
-        </div>
-        
-        {% if is_admin %}
-        <div class="alert alert-info">
-            <strong>Mode Administrateur:</strong> En tant que professeur, vous avez accès à tous les semestres et pouvez gérer les cours de tous les étudiants.
-        </div>
-        {% endif %}
-
-        <div class="row">
-            {% for semester_id, semester_data in courses.items() %}
-            {% if (semester_id.startswith('semestre1') or semester_id.startswith('semestre2')) and account_type in ['m1', 'prof'] 
-               or (semester_id.startswith('semestre3') or semester_id.startswith('semestre4')) and account_type in ['m2', 'prof'] %}
-            <div class="col-md-6 col-lg-3">
-                <div class="semester-card">
-                    <h5 class="card-title">{{ semester_data.title }}</h5>
-                    <p class="card-text">
-                        {% set selected_count = user.selected_courses[semester_id]|length %}
-                        {% if selected_count > 0 %}
-                            {{ selected_count }} cours sélectionnés
-                        {% else %}
-                            Aucun cours sélectionné
-                        {% endif %}
-                    </p>
+        <div class="message-card">
+            <div class="message-meta">
+                <h2 class="message-subject">{{ message.subject }}</h2>
+                <div class="message-from">De: <span>{{ message.sender_name }}</span></div>
+                <div class="message-time">{{ message.timestamp|replace('T', ' ')|truncate(19, true, '') }}</div>
+            </div>
+            
+            <div class="message-content">
+                {{ message.content|replace('\n', '<br>')|safe }}
+            </div>
+            
+            <div class="message-actions">
+                <a href="{{ url_for('messages') }}" class="btn btn-back">
+                    <i class="fas fa-arrow-left me-1"></i> Retour
+                </a>
+                
+                <div>
+                    <button class="btn btn-reply" data-bs-toggle="modal" data-bs-target="#replyModal">
+                        <i class="fas fa-reply me-1"></i> Répondre
+                    </button>
                     
-                    <div class="progress">
-                        {% set ects = semester_ects.get(semester_id, 0) %}
-                        {% set progress = (ects / 30) * 100 %}
-                        <div class="progress-bar" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ ects }}" aria-valuemin="0" aria-valuemax="30"></div>
-                    </div>
-                    <p class="progress-text">{{ ects }} ECTS / 30 ECTS</p>
-                    
-                    <a href="{{ url_for('semester', semester=semester_id) }}" class="btn btn-primary btn-sm">Voir les cours</a>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                        <i class="fas fa-trash me-1"></i> Supprimer
+                    </button>
                 </div>
             </div>
-            {% endif %}
-            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Modal pour répondre au message -->
+    <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="replyModalLabel">Répondre au message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="{{ url_for('send_message') }}" method="post">
+                    <div class="modal-body">
+                        <input type="hidden" name="recipient" value="{{ message.sender }}">
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <input type="text" class="form-control" id="subject" name="subject" value="Re: {{ message.subject }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Message</label>
+                            <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de confirmation de suppression -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirmer la suppression</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Êtes-vous sûr de vouloir supprimer ce message ?</p>
+                    <p class="mb-0"><strong>Sujet:</strong> {{ message.subject }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <form action="{{ url_for('delete_message', message_id=message.id) }}" method="post">
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     

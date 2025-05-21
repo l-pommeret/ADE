@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de bord - Choix de cours Master LOGOS</title>
+    <title>Messagerie - Master LOGOS</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -92,72 +92,111 @@
             color: #8a1639;
         }
         
-        .dashboard-container {
-            max-width: 1200px;
+        .message-container {
+            max-width: 1000px;
             margin: 30px auto;
             padding: 0 15px;
         }
         
-        .dashboard-title {
+        .message-header {
             margin-bottom: 30px;
+        }
+        
+        .message-title {
             color: #333;
+            margin-bottom: 10px;
         }
         
-        .dashboard-welcome {
-            margin-bottom: 30px;
-            padding: 20px;
+        .message-card {
             background-color: white;
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
         }
         
-        .semester-card {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-            padding: 20px;
-            transition: transform 0.3s ease;
+        .message-list {
+            margin-top: 20px;
         }
         
-        .semester-card:hover {
-            transform: translateY(-5px);
+        .message-item {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s ease;
         }
         
-        .semester-card .card-title {
-            color: #8a1639;
-            margin-bottom: 15px;
+        .message-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .message-item.unread {
+            background-color: #f8f9fa;
+            border-left: 3px solid #8a1639;
+        }
+        
+        .message-sender {
             font-weight: 600;
         }
         
-        .semester-card .card-text {
-            margin-bottom: 20px;
-            color: #666;
+        .message-time {
+            color: #777;
+            font-size: 12px;
         }
         
-        .semester-card .btn-primary {
+        .message-subject {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .message-preview {
+            color: #666;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .compose-btn {
             background-color: #8a1639;
             border-color: #8a1639;
+            color: white;
         }
         
-        .semester-card .btn-primary:hover {
-            background-color: #761433;
-            border-color: #761433;
+        .compose-btn:hover {
+            background-color: #76122f;
+            border-color: #76122f;
+            color: white;
         }
         
-        .semester-card .progress {
-            height: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        
-        .semester-card .progress-bar {
+        .badge-unread {
             background-color: #8a1639;
+            color: white;
         }
         
-        .semester-card .progress-text {
-            font-size: 14px;
-            color: #666;
+        .account-type-badge {
+            font-size: 11px;
+            padding: 2px 6px;
+            margin-left: 5px;
+            border-radius: 10px;
+        }
+        
+        .account-type-m1 {
+            background-color: #8a1639;
+            color: white;
+        }
+        
+        .account-type-m2 {
+            background-color: #1976d2;
+            color: white;
+        }
+        
+        .account-type-prof {
+            background-color: #388e3c;
+            color: white;
+        }
+        
+        .account-type-alumni {
+            background-color: #ff9800;
+            color: white;
         }
         
         .footer {
@@ -236,18 +275,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ url_for('dashboard') }}">Tableau de bord</a>
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Tableau de bord</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Semestres
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% if account_type in ['m1', 'prof'] %}
+                            {% if user.account_type in ['m1', 'prof', 'alumni'] %}
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre1') }}">Semestre 1</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre2') }}">Semestre 2</a></li>
                             {% endif %}
-                            {% if account_type in ['m2', 'prof'] %}
+                            {% if user.account_type in ['m2', 'prof', 'alumni'] %}
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre3') }}">Semestre 3</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre4') }}">Semestre 4</a></li>
                             {% endif %}
@@ -263,7 +302,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('messages') }}">Messagerie</a>
+                        <a class="nav-link active" href="{{ url_for('messages') }}">
+                            Messagerie
+                            {% set unread_count = messages|selectattr('read', 'equalto', false)|list|length %}
+                            {% if unread_count > 0 %}
+                            <span class="badge rounded-pill badge-unread">{{ unread_count }}</span>
+                            {% endif %}
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('annuaire') }}">Annuaire</a>
@@ -285,8 +330,15 @@
         </div>
     </nav>
     
-    <div class="dashboard-container">
-        <h1 class="dashboard-title">Tableau de bord</h1>
+    <div class="message-container">
+        <div class="message-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="message-title">Messagerie</h1>
+                <button class="btn compose-btn" data-bs-toggle="modal" data-bs-target="#composeModal">
+                    <i class="fas fa-pen me-1"></i> Nouveau message
+                </button>
+            </div>
+        </div>
         
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -296,48 +348,89 @@
             {% endif %}
         {% endwith %}
         
-        <div class="dashboard-welcome">
-            <h3>Bienvenue, {{ user.name }}!</h3>
-            <p>Vous pouvez consulter et choisir vos cours pour chaque semestre du Master LOGOS et consulter votre emploi du temps.</p>
-            <p><a href="{{ url_for('edt', niveau=account_type) }}" class="btn btn-primary mt-2">
-                <i class="fas fa-calendar-alt me-2"></i>Voir mon emploi du temps
-            </a></p>
-        </div>
-        
-        {% if is_admin %}
-        <div class="alert alert-info">
-            <strong>Mode Administrateur:</strong> En tant que professeur, vous avez accès à tous les semestres et pouvez gérer les cours de tous les étudiants.
-        </div>
-        {% endif %}
-
-        <div class="row">
-            {% for semester_id, semester_data in courses.items() %}
-            {% if (semester_id.startswith('semestre1') or semester_id.startswith('semestre2')) and account_type in ['m1', 'prof'] 
-               or (semester_id.startswith('semestre3') or semester_id.startswith('semestre4')) and account_type in ['m2', 'prof'] %}
-            <div class="col-md-6 col-lg-3">
-                <div class="semester-card">
-                    <h5 class="card-title">{{ semester_data.title }}</h5>
-                    <p class="card-text">
-                        {% set selected_count = user.selected_courses[semester_id]|length %}
-                        {% if selected_count > 0 %}
-                            {{ selected_count }} cours sélectionnés
-                        {% else %}
-                            Aucun cours sélectionné
-                        {% endif %}
-                    </p>
-                    
-                    <div class="progress">
-                        {% set ects = semester_ects.get(semester_id, 0) %}
-                        {% set progress = (ects / 30) * 100 %}
-                        <div class="progress-bar" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ ects }}" aria-valuemin="0" aria-valuemax="30"></div>
-                    </div>
-                    <p class="progress-text">{{ ects }} ECTS / 30 ECTS</p>
-                    
-                    <a href="{{ url_for('semester', semester=semester_id) }}" class="btn btn-primary btn-sm">Voir les cours</a>
-                </div>
+        <div class="message-card">
+            <div class="p-3 bg-light border-bottom">
+                <strong>Boîte de réception</strong>
+                {% set unread_count = messages|selectattr('read', 'equalto', false)|list|length %}
+                {% if unread_count > 0 %}
+                <span class="badge rounded-pill badge-unread">{{ unread_count }} non lu{{ 's' if unread_count > 1 }}</span>
+                {% endif %}
             </div>
-            {% endif %}
-            {% endfor %}
+            
+            <div class="message-list">
+                {% if messages %}
+                    {% for message in messages|sort(attribute='timestamp', reverse=true) %}
+                    <div class="message-item {{ 'unread' if not message.read }}">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="message-sender">{{ message.sender_name }}</div>
+                            <div class="message-time">{{ message.timestamp|replace('T', ' ')|truncate(16, true, '') }}</div>
+                        </div>
+                        <div class="message-subject">
+                            <a href="{{ url_for('read_message', message_id=message.id) }}" class="text-decoration-none text-dark">
+                                {{ message.subject }}
+                                {% if not message.read %}
+                                <span class="badge rounded-pill badge-unread">Nouveau</span>
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="message-preview">{{ message.content|truncate(100) }}</div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="p-4 text-center text-muted">
+                        <i class="far fa-envelope fa-3x mb-3"></i>
+                        <p>Votre boîte de réception est vide</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal pour composer un message -->
+    <div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composeModalLabel">Nouveau message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="{{ url_for('send_message') }}" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="recipient" class="form-label">Destinataire</label>
+                            <select class="form-select" id="recipient" name="recipient" required>
+                                <option value="" selected disabled>Choisir un destinataire</option>
+                                {% for other_user in other_users %}
+                                <option value="{{ other_user.username }}">
+                                    {{ other_user.name }}
+                                    {% if other_user.account_type == 'm1' %}
+                                    <span class="account-type-badge account-type-m1">M1</span>
+                                    {% elif other_user.account_type == 'm2' %}
+                                    <span class="account-type-badge account-type-m2">M2</span>
+                                    {% elif other_user.account_type == 'prof' %}
+                                    <span class="account-type-badge account-type-prof">Prof</span>
+                                    {% elif other_user.account_type == 'alumni' %}
+                                    <span class="account-type-badge account-type-alumni">Alumni</span>
+                                    {% endif %}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Message</label>
+                            <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     

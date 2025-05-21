@@ -242,6 +242,21 @@
                             <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre4') }}">Semestre 4</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="edtDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Emploi du temps
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="edtDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m1') }}">M1 LOGOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m2') }}">M2 LOGOS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('messages') }}">Messagerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('annuaire') }}">Annuaire</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
@@ -288,6 +303,44 @@
                     <label for="name" class="form-label">Nom complet</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ user.name }}" required>
                 </div>
+                
+                {% if user.account_type == 'alumni' %}
+                <div class="form-group mt-4">
+                    <h5>Informations Alumni</h5>
+                    <label class="form-label">Années de présence au Master LOGOS</label>
+                    <div class="row">
+                        {% for year in range(2015, 2026) %}
+                        <div class="col-md-3 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="attendance_years" value="{{ year }}-{{ year+1 }}" 
+                                       id="year-{{ year }}" {% if user.attendance_years and year|string + '-' + (year+1)|string in user.attendance_years %}checked{% endif %}>
+                                <label class="form-check-label" for="year-{{ year }}">
+                                    {{ year }}-{{ year+1 }}
+                                </label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <label class="form-label mt-3">Niveau(x) suivi(s) au LOGOS</label>
+                    <div class="d-flex">
+                        <div class="form-check me-4">
+                            <input class="form-check-input" type="checkbox" name="attended_levels" value="m1" 
+                                   id="level-m1" {% if user.attended_levels and 'm1' in user.attended_levels %}checked{% endif %}>
+                            <label class="form-check-label" for="level-m1">
+                                Master 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="attended_levels" value="m2" 
+                                   id="level-m2" {% if user.attended_levels and 'm2' in user.attended_levels %}checked{% endif %}>
+                            <label class="form-check-label" for="level-m2">
+                                Master 2
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
                 
                 <div class="password-section">
                     <h4 class="password-section-title">Changer de mot de passe</h4>

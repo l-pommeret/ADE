@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire - Master LOGOS</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Poppins%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        .header {
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .header-top {
+            border-bottom: 2px solid #8a1639;
+            padding-bottom: 5px;
+            padding-top: 3px;
+            text-align: center;
+        }
+        
+        .header-top img {
+            max-height: 50px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            max-width: 210px;
+        }
+        
+        .navbar {
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .navbar .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 10px 15px;
+        }
+        
+        .navbar .navbar-nav .nav-link:hover {
+            color: #8a1639;
+        }
+        
+        .navbar .navbar-nav .nav-link.active {
+            color: #8a1639;
+            background-color: rgba(138, 22, 57, 0.1);
+            border-radius: 4px;
+        }
+        
+        .navbar .dropdown-menu {
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: none;
+        }
+        
+        .navbar .dropdown-item:hover {
+            background-color: rgba(138, 22, 57, 0.1);
+            color: #8a1639;
+        }
+        
+        .annuaire-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        
+        .annuaire-header {
+            margin-bottom: 30px;
+        }
+        
+        .annuaire-title {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .annuaire-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .annuaire-card-header {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .annuaire-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .annuaire-user {
+            border-bottom: 1px solid #e9ecef;
+            padding: 15px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .annuaire-user:last-child {
+            border-bottom: none;
+        }
+        
+        .annuaire-user:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .user-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .user-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .user-email {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .user-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .user-detail {
+            padding: 3px 8px;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        
+        .user-courses {
+            margin-top: 15px;
+        }
+        
+        .badge-account-type {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+        
+        .badge-m1 {
+            background-color: #8a1639;
+            color: white;
+        }
+        
+        .badge-m2 {
+            background-color: #1976d2;
+            color: white;
+        }
+        
+        .badge-prof {
+            background-color: #388e3c;
+            color: white;
+        }
+        
+        .badge-alumni {
+            background-color: #ff9800;
+            color: white;
+        }
+        
+        .btn-message {
+            background-color: #8a1639;
+            border-color: #8a1639;
+            color: white;
+            font-size: 12px;
+            padding: 3px 10px;
+        }
+        
+        .btn-message:hover {
+            background-color: #761433;
+            border-color: #761433;
+            color: white;
+        }
+        
+        .semester-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .course-list {
+            padding-left: 15px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        
+        .course-item {
+            margin-bottom: 3px;
+        }
+        
+        .course-item .ects {
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .filter-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+        
+        .footer-column h5 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px;
+        }
+        
+        .alert {
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+            
+            .footer-column {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <img src="https://master-logos.fr/wp-content/uploads/2022/04/universite-paris-1.jpg" alt="Université Paris Cité">
+        </div>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://master-logos.fr/wp-content/uploads/2022/04/logo-1.jpg" alt="Master Logos">
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="navbar-container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Tableau de bord</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Semestres
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if user.account_type in ['m1', 'prof', 'alumni'] %}
+                            <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre1') }}">Semestre 1</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre2') }}">Semestre 2</a></li>
+                            {% endif %}
+                            {% if user.account_type in ['m2', 'prof', 'alumni'] %}
+                            <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre3') }}">Semestre 3</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('semester', semester='semestre4') }}">Semestre 4</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="edtDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Emploi du temps
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="edtDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m1') }}">M1 LOGOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('edt', niveau='m2') }}">M2 LOGOS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('messages') }}">Messagerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('annuaire') }}">Annuaire</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-1"></i> {{ session.get('name', 'Mon compte') }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('profile') }}">Mon profil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('logout') }}">Déconnexion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="annuaire-container">
+        <div class="annuaire-header">
+            <h1 class="annuaire-title">Annuaire du Master LOGOS</h1>
+            <p class="text-muted">Consultez la liste des étudiants, des alumni et des professeurs.</p>
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="filter-account-type" class="form-label">Type de compte</label>
+                    <select class="form-select" id="filter-account-type">
+                        <option value="all">Tous</option>
+                        <option value="prof">Professeurs</option>
+                        <option value="alumni">Alumni</option>
+                        <option value="m1">Étudiants M1</option>
+                        <option value="m2">Étudiants M2</option>
+                    </select>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <label for="filter-search" class="form-label">Rechercher</label>
+                    <input type="text" class="form-control" id="filter-search" placeholder="Nom, email, cours...">
+                </div>
+            </div>
+        </div>
+        
+        <div class="annuaire-card">
+            <div class="annuaire-card-header">
+                <h5 class="mb-0">Liste des membres ({{ annuaire_users|length }})</h5>
+            </div>
+            
+            <ul class="annuaire-list">
+                {% for user_item in annuaire_users %}
+                <li class="annuaire-user" data-account-type="{{ user_item.account_type }}">
+                    <div class="user-header">
+                        <div class="user-name">
+                            {{ user_item.name }}
+                            {% if user_item.account_type == 'm1' %}
+                            <span class="badge badge-account-type badge-m1">M1</span>
+                            {% elif user_item.account_type == 'm2' %}
+                            <span class="badge badge-account-type badge-m2">M2</span>
+                            {% elif user_item.account_type == 'prof' %}
+                            <span class="badge badge-account-type badge-prof">Professeur</span>
+                            {% elif user_item.account_type == 'alumni' %}
+                            <span class="badge badge-account-type badge-alumni">Alumni</span>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="user-actions">
+                            {% if user_item.username != user.username %}
+                            <button class="btn btn-message" data-bs-toggle="modal" data-bs-target="#messageModal" 
+                                   data-username="{{ user_item.username }}" data-name="{{ user_item.name }}">
+                                <i class="fas fa-envelope me-1"></i> Message
+                            </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="user-email">
+                        <i class="fas fa-envelope me-1"></i> {{ user_item.email }}
+                    </div>
+                    
+                    <div class="user-info">
+                        {% if user_item.account_type == 'alumni' %}
+                            {% if user_item.attendance_years %}
+                                <div class="user-detail">
+                                    <i class="fas fa-calendar-alt me-1"></i> 
+                                    {% for year in user_item.attendance_years %}
+                                        {{ year }}{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                            
+                            {% if user_item.attended_levels %}
+                                <div class="user-detail">
+                                    <i class="fas fa-graduation-cap me-1"></i> 
+                                    {% for level in user_item.attended_levels %}
+                                        {% if level == 'm1' %}M1{% elif level == 'm2' %}M2{% endif %}{% if not loop.last %} & {% endif %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="user-courses">
+                        <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" href="#courses-{{ loop.index }}" role="button" aria-expanded="false">
+                            <i class="fas fa-book me-1"></i> Voir les cours
+                        </a>
+                        
+                        <div class="collapse mt-2" id="courses-{{ loop.index }}">
+                            {% if user_item.account_type in ['m1', 'alumni'] %}
+                                {% if user_item.selected_courses.semestre1 %}
+                                    <div class="semester-title">Semestre 1</div>
+                                    <ul class="course-list">
+                                        {% for course in user_item.selected_courses.semestre1 %}
+                                        <li class="course-item">{{ course.name }} <span class="ects">({{ course.ects }} ECTS)</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                
+                                {% if user_item.selected_courses.semestre2 %}
+                                    <div class="semester-title">Semestre 2</div>
+                                    <ul class="course-list">
+                                        {% for course in user_item.selected_courses.semestre2 %}
+                                        <li class="course-item">{{ course.name }} <span class="ects">({{ course.ects }} ECTS)</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            {% endif %}
+                            
+                            {% if user_item.account_type in ['m2', 'alumni'] %}
+                                {% if user_item.selected_courses.semestre3 %}
+                                    <div class="semester-title">Semestre 3</div>
+                                    <ul class="course-list">
+                                        {% for course in user_item.selected_courses.semestre3 %}
+                                        <li class="course-item">{{ course.name }} <span class="ects">({{ course.ects }} ECTS)</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                
+                                {% if user_item.selected_courses.semestre4 %}
+                                    <div class="semester-title">Semestre 4</div>
+                                    <ul class="course-list">
+                                        {% for course in user_item.selected_courses.semestre4 %}
+                                        <li class="course-item">{{ course.name }} <span class="ects">({{ course.ects }} ECTS)</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            {% endif %}
+                            
+                            {% if not user_item.selected_courses.semestre1 and not user_item.selected_courses.semestre2 and not user_item.selected_courses.semestre3 and not user_item.selected_courses.semestre4 %}
+                                <p class="text-muted">Aucun cours sélectionné</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal pour envoyer un message -->
+    <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="messageModalLabel">Envoyer un message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="{{ url_for('send_message') }}" method="post">
+                    <div class="modal-body">
+                        <input type="hidden" name="recipient" id="recipient-username">
+                        <div class="mb-3">
+                            <label for="recipient-name" class="form-label">Destinataire</label>
+                            <input type="text" class="form-control" id="recipient-name" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Message</label>
+                            <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="https://master-logos.fr/wp-content/uploads/2022/04/logo-2.jpg" alt="Master LOGOS">
+                </div>
+                <p>Campus des Grands Moulins<br>
+                5 rue Thomas Mann<br>
+                75013 Paris</p>
+            </div>
+            <div class="footer-column">
+                <h5>Liens utiles</h5>
+                <p><a href="https://master-logos.fr/" style="color: white;">Site du Master LOGOS</a></p>
+                <p><a href="https://www.u-paris.fr/" style="color: white;">Université Paris Cité</a></p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2024 Master Logos</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fonctionnalité de filtrage
+            const filterAccountType = document.getElementById('filter-account-type');
+            const filterSearch = document.getElementById('filter-search');
+            const userElements = document.querySelectorAll('.annuaire-user');
+            
+            function applyFilters() {
+                const accountType = filterAccountType.value;
+                const searchText = filterSearch.value.toLowerCase();
+                
+                userElements.forEach(userEl => {
+                    const userAccountType = userEl.dataset.accountType;
+                    const userContent = userEl.textContent.toLowerCase();
+                    
+                    // Vérifier le type de compte
+                    const accountTypeMatch = accountType === 'all' || userAccountType === accountType;
+                    
+                    // Vérifier le texte de recherche
+                    const searchMatch = searchText === '' || userContent.includes(searchText);
+                    
+                    // Afficher ou cacher l'élément
+                    userEl.style.display = accountTypeMatch && searchMatch ? 'block' : 'none';
+                });
+            }
+            
+            filterAccountType.addEventListener('change', applyFilters);
+            filterSearch.addEventListener('input', applyFilters);
+            
+            // Modal pour envoyer un message
+            const messageModal = document.getElementById('messageModal');
+            messageModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                const username = button.getAttribute('data-username');
+                const name = button.getAttribute('data-name');
+                
+                const recipientUsernameInput = document.getElementById('recipient-username');
+                const recipientNameInput = document.getElementById('recipient-name');
+                
+                recipientUsernameInput.value = username;
+                recipientNameInput.value = name;
+            });
+        });
+    </script>
+</body>
+</html>

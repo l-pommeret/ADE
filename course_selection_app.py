@@ -163,6 +163,8 @@ def index():
         
         if account_type == 'm2':
             return redirect(url_for('edt', niveau='m2'))
+        elif account_type == 'alumni':
+            return redirect(url_for('edt', niveau='m2'))  # Les alumni voient l'emploi du temps M2 par défaut
         else:
             return redirect(url_for('edt', niveau='m1'))
     return render_template('login.html')
@@ -224,7 +226,10 @@ def register():
                     'semestre2': [],
                     'semestre3': [],
                     'semestre4': []
-                }
+                },
+                'messages': [],
+                'attendance_years': [] if account_type == 'alumni' else None,
+                'attended_levels': [] if account_type == 'alumni' else None
             }
             save_users()
             flash('Activation du compte réussie! Vous pouvez maintenant vous connecter.', 'success')
@@ -282,7 +287,7 @@ def semester(semester):
     is_admin = user.get('is_admin', False)
     
     # Vérification des droits d'accès aux semestres selon le type de compte
-    if not is_admin:
+    if not is_admin and account_type not in ['prof', 'alumni']:
         if account_type == 'm1' and semester in ['semestre3', 'semestre4']:
             flash('Vous n\'avez pas accès à ce semestre avec votre type de compte.', 'danger')
             return redirect(url_for('dashboard'))
@@ -398,6 +403,15 @@ def update_profile():
         user['name'] = name
         session['name'] = name
         
+        # Si c'est un alumni, mettre à jour les informations supplémentaires
+        if user.get('account_type') == 'alumni':
+            attendance_years = request.form.getlist('attendance_years')
+            attended_levels = request.form.getlist('attended_levels')
+            if attendance_years:
+                user['attendance_years'] = attendance_years
+            if attended_levels:
+                user['attended_levels'] = attended_levels
+        
         # Mettre à jour le mot de passe si demandé
         if current_password and new_password and confirm_password:
             if not check_password_hash(user['password'], current_password):
@@ -414,6 +428,171 @@ def update_profile():
         save_users()
         flash('Profil mis à jour avec succès.', 'success')
         return redirect(url_for('profile'))
+
+# Annuaire des utilisateurs
+@app.route('/annuaire')
+def annuaire():
+    if 'username' not in session:
+        flash('Veuillez vous connecter pour accéder à cette page.', 'danger')
+        return redirect(url_for('login'))
+    
+    users = load_users()
+    user = users.get(session['username'])
+    
+    # Récupérer tous les utilisateurs pour l'annuaire
+    annuaire_users = []
+    for username, user_data in users.items():
+        # Récupérer les informations des cours sélectionnés
+        selected_courses_info = {}
+        for semester, course_ids in user_data.get('selected_courses', {}).items():
+            selected_courses_info[semester] = []
+            for course_id in course_ids:
+                for block in COURSES[semester]['blocks'].values():
+                    for course in block['courses']:
+                        if course['id'] == course_id:
+                            selected_courses_info[semester].append({
+                                'id': course_id,
+                                'name': course.get('title', 'Cours sans titre'),  # Utiliser 'title' au lieu de 'name'
+                                'ects': course['ects']
+                            })
+                            break
+        
+        # Créer l'entrée utilisateur pour l'annuaire
+        annuaire_users.append({
+            'username': username,
+            'name': user_data.get('name', username),
+            'email': user_data.get('email', ''),
+            'account_type': user_data.get('account_type', 'm1'),
+            'is_admin': user_data.get('is_admin', False),
+            'attendance_years': user_data.get('attendance_years', []),
+            'selected_courses': selected_courses_info
+        })
+    
+    # Tri par type de compte et nom
+    annuaire_users.sort(key=lambda x: (
+        0 if x['is_admin'] else (1 if x['account_type'] == 'alumni' else 2),
+        x['name']
+    ))
+    
+    return render_template('annuaire.html', 
+                          user=user, 
+                          annuaire_users=annuaire_users)
+
+# Messagerie
+@app.route('/messages')
+def messages():
+    if 'username' not in session:
+        flash('Veuillez vous connecter pour accéder à cette page.', 'danger')
+        return redirect(url_for('login'))
+    
+    users = load_users()
+    user = users.get(session['username'])
+    
+    # Liste des utilisateurs pour envoyer des messages
+    other_users = []
+    for username, user_data in users.items():
+        if username != session['username']:
+            other_users.append({
+                'username': username,
+                'name': user_data.get('name', username),
+                'account_type': user_data.get('account_type', 'm1')
+            })
+    
+    # Tri par type de compte et nom
+    other_users.sort(key=lambda x: (x['account_type'], x['name']))
+    
+    return render_template('messages.html', 
+                          user=user, 
+                          messages=user.get('messages', []), 
+                          other_users=other_users)
+
+@app.route('/messages/send', methods=['POST'])
+def send_message():
+    if 'username' not in session:
+        flash('Veuillez vous connecter pour accéder à cette page.', 'danger')
+        return redirect(url_for('login'))
+    
+    if request.method == 'POST':
+        recipient_username = request.form['recipient']
+        subject = request.form['subject']
+        content = request.form['content']
+        
+        if not recipient_username or not subject or not content:
+            flash('Veuillez remplir tous les champs.', 'danger')
+            return redirect(url_for('messages'))
+        
+        users = load_users()
+        
+        # Vérifier que le destinataire existe
+        if recipient_username not in users:
+            flash('Destinataire introuvable.', 'danger')
+            return redirect(url_for('messages'))
+        
+        # Préparer le message
+        message = {
+            'id': f"msg_{datetime.datetime.now().timestamp()}",
+            'sender': session['username'],
+            'sender_name': users[session['username']]['name'],
+            'subject': subject,
+            'content': content,
+            'timestamp': datetime.datetime.now().isoformat(),
+            'read': False
+        }
+        
+        # Ajouter le message au destinataire
+        if 'messages' not in users[recipient_username]:
+            users[recipient_username]['messages'] = []
+        
+        users[recipient_username]['messages'].append(message)
+        save_users()
+        
+        flash('Message envoyé avec succès.', 'success')
+        return redirect(url_for('messages'))
+    
+    return redirect(url_for('messages'))
+
+@app.route('/messages/read/<message_id>')
+def read_message(message_id):
+    if 'username' not in session:
+        flash('Veuillez vous connecter pour accéder à cette page.', 'danger')
+        return redirect(url_for('login'))
+    
+    users = load_users()
+    user = users.get(session['username'])
+    
+    # Chercher le message
+    message = None
+    for msg in user.get('messages', []):
+        if msg['id'] == message_id:
+            message = msg
+            msg['read'] = True  # Marquer comme lu
+            break
+    
+    if not message:
+        flash('Message introuvable.', 'danger')
+        return redirect(url_for('messages'))
+    
+    save_users()
+    
+    return render_template('message_detail.html', user=user, message=message)
+
+@app.route('/messages/delete/<message_id>', methods=['POST'])
+def delete_message(message_id):
+    if 'username' not in session:
+        flash('Veuillez vous connecter pour accéder à cette page.', 'danger')
+        return redirect(url_for('login'))
+    
+    users = load_users()
+    user = users.get(session['username'])
+    
+    # Chercher et supprimer le message
+    messages = user.get('messages', [])
+    user['messages'] = [msg for msg in messages if msg['id'] != message_id]
+    
+    save_users()
+    flash('Message supprimé.', 'success')
+    
+    return redirect(url_for('messages'))
 
 # Fonction pour charger les événements du calendrier depuis un fichier ICS
 def charger_calendrier(chemin_fichier_ics):
@@ -464,7 +643,8 @@ def charger_calendrier(chemin_fichier_ics):
                         'end': fin_dt.isoformat() if fin_dt else None,
                         'description': str(composant.get('description', '')),
                         'location': str(composant.get('location', '')),
-                        'allDay': not isinstance(debut_dt, datetime.datetime)
+                        'allDay': not isinstance(debut_dt, datetime.datetime),
+                        'isCustom': False
                     })
         
         return evenements
@@ -472,6 +652,9 @@ def charger_calendrier(chemin_fichier_ics):
     except Exception as e:
         print(f"Erreur lors de l'analyse du fichier ICS: {e}")
         return []
+
+# Stockage des événements personnalisés (en mémoire pour cet exemple)
+CUSTOM_EVENTS = []
 
 # Nouvelle route pour l'emploi du temps
 @app.route('/edt/<niveau>')
@@ -491,6 +674,15 @@ def edt(niveau):
     
     # Le titre de la page dépend du niveau sélectionné
     title = f"Emploi du temps M{'1' if niveau == 'm1' else '2'} LOGOS"
+    
+    # Vérifier les restrictions d'accès (sauf pour les alumni et les profs qui peuvent tout voir)
+    if not is_admin and account_type not in ['prof', 'alumni']:
+        if account_type == 'm1' and niveau == 'm2':
+            flash('Les étudiants M1 ne peuvent pas voir l\'emploi du temps M2.', 'danger')
+            return redirect(url_for('edt', niveau='m1'))
+        elif account_type == 'm2' and niveau == 'm1':
+            flash('Les étudiants M2 ne peuvent pas voir l\'emploi du temps M1.', 'danger')
+            return redirect(url_for('edt', niveau='m2'))
     
     return render_template('edt.html', 
                           title=title,
@@ -514,6 +706,117 @@ def get_events(niveau):
     # Charger les événements du calendrier
     evenements = charger_calendrier(chemin_fichier_ics)
     return jsonify(evenements)
+
+# API pour ajouter un événement personnalisé (admin uniquement)
+@app.route('/api/add_custom_event', methods=['POST'])
+def add_custom_event():
+    if 'username' not in session or not session.get('is_admin', False):
+        return jsonify({'success': False, 'message': 'Vous n\'avez pas les droits nécessaires.'}), 403
+    
+    data = request.json
+    
+    # Validation de base
+    if not data.get('title') or not data.get('start') or not data.get('end'):
+        return jsonify({'success': False, 'message': 'Informations manquantes.'}), 400
+    
+    # Générer un ID unique
+    event_id = f"custom_{datetime.datetime.now().timestamp()}_{len(CUSTOM_EVENTS)}"
+    
+    # Créer l'événement
+    event = {
+        'id': event_id,
+        'title': data.get('title'),
+        'start': data.get('start'),
+        'end': data.get('end'),
+        'description': data.get('description', ''),
+        'location': data.get('location', ''),
+        'for_m1': data.get('for_m1', True),
+        'for_m2': data.get('for_m2', True),
+        'isCustom': True
+    }
+    
+    # Ajouter à la liste
+    CUSTOM_EVENTS.append(event)
+    
+    return jsonify({'success': True, 'id': event_id})
+
+# API pour mettre à jour un événement personnalisé (admin uniquement)
+@app.route('/api/update_custom_event', methods=['POST'])
+def update_custom_event():
+    if 'username' not in session or not session.get('is_admin', False):
+        return jsonify({'success': False, 'message': 'Vous n\'avez pas les droits nécessaires.'}), 403
+    
+    data = request.json
+    event_id = data.get('id')
+    
+    # Validation de base
+    if not event_id or not data.get('title') or not data.get('start') or not data.get('end'):
+        return jsonify({'success': False, 'message': 'Informations manquantes.'}), 400
+    
+    # Trouver l'événement à mettre à jour
+    for i, event in enumerate(CUSTOM_EVENTS):
+        if event['id'] == event_id:
+            # Mettre à jour l'événement
+            CUSTOM_EVENTS[i] = {
+                'id': event_id,
+                'title': data.get('title'),
+                'start': data.get('start'),
+                'end': data.get('end'),
+                'description': data.get('description', ''),
+                'location': data.get('location', ''),
+                'for_m1': data.get('for_m1', True),
+                'for_m2': data.get('for_m2', True),
+                'isCustom': True
+            }
+            return jsonify({'success': True})
+    
+    return jsonify({'success': False, 'message': 'Événement non trouvé.'}), 404
+
+# API pour supprimer un événement personnalisé (admin uniquement)
+@app.route('/api/delete_custom_event', methods=['POST'])
+def delete_custom_event():
+    if 'username' not in session or not session.get('is_admin', False):
+        return jsonify({'success': False, 'message': 'Vous n\'avez pas les droits nécessaires.'}), 403
+    
+    data = request.json
+    event_id = data.get('id')
+    
+    # Validation de base
+    if not event_id:
+        return jsonify({'success': False, 'message': 'ID d\'événement manquant.'}), 400
+    
+    # Trouver et supprimer l'événement
+    for i, event in enumerate(CUSTOM_EVENTS):
+        if event['id'] == event_id:
+            CUSTOM_EVENTS.pop(i)
+            return jsonify({'success': True})
+    
+    return jsonify({'success': False, 'message': 'Événement non trouvé.'}), 404
+
+# API pour récupérer tous les événements personnalisés (admin uniquement)
+@app.route('/api/custom_events')
+def get_all_custom_events():
+    if 'username' not in session or not session.get('is_admin', False):
+        return jsonify({'error': 'Vous n\'avez pas les droits nécessaires.'}), 403
+    
+    return jsonify(CUSTOM_EVENTS)
+
+# API pour récupérer les événements personnalisés pour un niveau spécifique
+@app.route('/api/custom_events/<niveau>')
+def get_custom_events(niveau):
+    if 'username' not in session:
+        return jsonify({'error': 'Vous devez être connecté pour accéder à ces données.'}), 401
+    
+    if niveau not in ['m1', 'm2']:
+        return jsonify({'error': 'Niveau non valide.'}), 400
+    
+    # Filtrer les événements en fonction du niveau
+    if niveau == 'm1':
+        events = [e for e in CUSTOM_EVENTS if e.get('for_m1', True)]
+    else:
+        events = [e for e in CUSTOM_EVENTS if e.get('for_m2', True)]
+    
+    return jsonify(events)
 
 # Initialisation de l'application
 if __name__ == '__main__':

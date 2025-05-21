@@ -184,6 +184,18 @@
             border-color: #8a1639;
         }
         
+        .btn-logos {
+            background-color: #8a1639;
+            color: white;
+            border-color: #8a1639;
+        }
+        
+        .btn-logos:hover {
+            background-color: #771432;
+            color: white;
+            border-color: #771432;
+        }
+        
         .footer {
             background-color: #333;
             color: white;
@@ -222,6 +234,14 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
             margin-top: 20px;
+        }
+        
+        .admin-controls {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #8a1639;
         }
         
         @media (max-width: 768px) {
@@ -285,6 +305,12 @@
                             <li><a class="dropdown-item {% if niveau == 'm2' %}active{% endif %}" href="{{ url_for('edt', niveau='m2') }}">M2 LOGOS</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('messages') }}">Messagerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('annuaire') }}">Annuaire</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
@@ -307,6 +333,16 @@
     </div>
     
     <div class="container">
+        {% if is_admin %}
+        <div class="admin-controls">
+            <h4><i class="fas fa-user-shield me-2"></i>Outils administrateur</h4>
+            <p>En tant que professeur, vous pouvez ajouter des événements à l'emploi du temps.</p>
+            <button class="btn btn-logos" data-bs-toggle="modal" data-bs-target="#addEventModal">
+                <i class="fas fa-plus me-2"></i>Ajouter un événement
+            </button>
+        </div>
+        {% endif %}
+        
         <div class="mb-4">
             <div class="btn-group" role="group">
                 <button id="view-month" class="btn btn-outline-primary">Mois</button>
@@ -368,11 +404,140 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    {% if is_admin %}
+                    <button type="button" class="btn btn-danger me-auto" id="delete-event-btn">Supprimer</button>
+                    <button type="button" class="btn btn-primary" id="edit-event-btn">Modifier</button>
+                    {% endif %}
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Modal pour ajouter un événement (admin) -->
+    {% if is_admin %}
+    <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addEventModalLabel">Ajouter un événement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-event-form">
+                        <div class="mb-3">
+                            <label for="event-title-input" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="event-title-input" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="event-date-input" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="event-date-input" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="event-start-time-input" class="form-label">Heure de début</label>
+                                <input type="time" class="form-control" id="event-start-time-input" required>
+                            </div>
+                            <div class="col">
+                                <label for="event-end-time-input" class="form-label">Heure de fin</label>
+                                <input type="time" class="form-control" id="event-end-time-input" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="event-location-input" class="form-label">Lieu</label>
+                            <input type="text" class="form-control" id="event-location-input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="event-description-input" class="form-label">Description</label>
+                            <textarea class="form-control" id="event-description-input" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pour qui ?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="m1" id="event-for-m1" checked>
+                                <label class="form-check-label" for="event-for-m1">
+                                    M1 LOGOS
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="m2" id="event-for-m2" checked>
+                                <label class="form-check-label" for="event-for-m2">
+                                    M2 LOGOS
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="submit-event-btn">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal pour modifier un événement (admin) -->
+    <div class="modal fade" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editEventModalLabel">Modifier un événement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-event-form">
+                        <input type="hidden" id="edit-event-id">
+                        <div class="mb-3">
+                            <label for="edit-event-title-input" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="edit-event-title-input" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-event-date-input" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="edit-event-date-input" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="edit-event-start-time-input" class="form-label">Heure de début</label>
+                                <input type="time" class="form-control" id="edit-event-start-time-input" required>
+                            </div>
+                            <div class="col">
+                                <label for="edit-event-end-time-input" class="form-label">Heure de fin</label>
+                                <input type="time" class="form-control" id="edit-event-end-time-input" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-event-location-input" class="form-label">Lieu</label>
+                            <input type="text" class="form-control" id="edit-event-location-input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-event-description-input" class="form-label">Description</label>
+                            <textarea class="form-control" id="edit-event-description-input" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pour qui ?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="m1" id="edit-event-for-m1">
+                                <label class="form-check-label" for="edit-event-for-m1">
+                                    M1 LOGOS
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="m2" id="edit-event-for-m2">
+                                <label class="form-check-label" for="edit-event-for-m2">
+                                    M2 LOGOS
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="update-event-btn">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
     
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -407,7 +572,20 @@
                         url: '/api/events/{{ niveau }}',
                         color: '#8a1639',
                         textColor: 'white'
+                    },
+                    {% if is_admin %}
+                    {
+                        url: '/api/custom_events',
+                        color: '#1e88e5',
+                        textColor: 'white'
                     }
+                    {% else %}
+                    {
+                        url: '/api/custom_events/{{ niveau }}',
+                        color: '#1e88e5',
+                        textColor: 'white'
+                    }
+                    {% endif %}
                 ],
                 eventTimeFormat: {
                     hour: '2-digit',
@@ -486,6 +664,8 @@
                 const end = event.end;
                 const description = event.extendedProps.description;
                 const location = event.extendedProps.location;
+                const isCustom = event.extendedProps.isCustom || false;
+                const eventId = event.id;
                 
                 // Formatage de la date et de l'heure
                 const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -507,10 +687,240 @@
                 document.getElementById('event-location').textContent = location || 'Non spécifié';
                 document.getElementById('event-description').textContent = description || 'Aucune description disponible';
                 
+                {% if is_admin %}
+                // Gestion des boutons d'édition/suppression (seulement pour les événements personnalisés)
+                const deleteBtn = document.getElementById('delete-event-btn');
+                const editBtn = document.getElementById('edit-event-btn');
+                
+                if (isCustom) {
+                    // C'est un événement personnalisé que l'admin peut modifier/supprimer
+                    deleteBtn.style.display = 'block';
+                    editBtn.style.display = 'block';
+                    
+                    // Configurer les gestionnaires d'événements
+                    deleteBtn.onclick = function() {
+                        deleteEvent(eventId);
+                    };
+                    
+                    editBtn.onclick = function() {
+                        prepareEditModal(event);
+                    };
+                } else {
+                    // C'est un événement standard du calendrier, pas modifiable
+                    deleteBtn.style.display = 'none';
+                    editBtn.style.display = 'none';
+                }
+                {% endif %}
+                
                 // Affichage de la modal
                 const eventModal = new bootstrap.Modal(document.getElementById('eventModal'));
                 eventModal.show();
             }
+            
+            {% if is_admin %}
+            // Soumettre le formulaire d'ajout d'événement
+            document.getElementById('submit-event-btn').addEventListener('click', function() {
+                const titleInput = document.getElementById('event-title-input');
+                const dateInput = document.getElementById('event-date-input');
+                const startTimeInput = document.getElementById('event-start-time-input');
+                const endTimeInput = document.getElementById('event-end-time-input');
+                const locationInput = document.getElementById('event-location-input');
+                const descriptionInput = document.getElementById('event-description-input');
+                const forM1 = document.getElementById('event-for-m1').checked;
+                const forM2 = document.getElementById('event-for-m2').checked;
+                
+                // Vérification de base
+                if (!titleInput.value || !dateInput.value || !startTimeInput.value || !endTimeInput.value) {
+                    alert('Veuillez remplir tous les champs obligatoires');
+                    return;
+                }
+                
+                // Création de l'objet date pour start et end
+                const startDateTime = new Date(`${dateInput.value}T${startTimeInput.value}`);
+                const endDateTime = new Date(`${dateInput.value}T${endTimeInput.value}`);
+                
+                // Vérifier que la date de fin est après la date de début
+                if (endDateTime <= startDateTime) {
+                    alert('L\'heure de fin doit être après l\'heure de début');
+                    return;
+                }
+                
+                // Préparation des données
+                const eventData = {
+                    title: titleInput.value,
+                    start: startDateTime.toISOString(),
+                    end: endDateTime.toISOString(),
+                    location: locationInput.value,
+                    description: descriptionInput.value,
+                    for_m1: forM1,
+                    for_m2: forM2
+                };
+                
+                // Envoi au serveur
+                fetch('/api/add_custom_event', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(eventData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Fermer la modal
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('addEventModal'));
+                        modal.hide();
+                        
+                        // Réinitialiser le formulaire
+                        document.getElementById('add-event-form').reset();
+                        
+                        // Rafraîchir le calendrier
+                        calendar.refetchEvents();
+                        
+                        alert('Événement ajouté avec succès');
+                    } else {
+                        alert('Erreur lors de l\'ajout de l\'événement: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    alert('Une erreur est survenue lors de l\'ajout de l\'événement');
+                });
+            });
+            
+            // Préparer la modal d'édition avec les données de l'événement
+            function prepareEditModal(event) {
+                const eventId = event.id;
+                const title = event.title;
+                const start = event.start;
+                const end = event.end;
+                const description = event.extendedProps.description;
+                const location = event.extendedProps.location;
+                const forM1 = event.extendedProps.for_m1;
+                const forM2 = event.extendedProps.for_m2;
+                
+                // Formatage des dates pour les champs input
+                const dateStr = start.toISOString().split('T')[0];
+                const startTimeStr = start.toISOString().substring(11, 16);
+                const endTimeStr = end ? end.toISOString().substring(11, 16) : '';
+                
+                // Remplissage du formulaire
+                document.getElementById('edit-event-id').value = eventId;
+                document.getElementById('edit-event-title-input').value = title;
+                document.getElementById('edit-event-date-input').value = dateStr;
+                document.getElementById('edit-event-start-time-input').value = startTimeStr;
+                document.getElementById('edit-event-end-time-input').value = endTimeStr;
+                document.getElementById('edit-event-location-input').value = location || '';
+                document.getElementById('edit-event-description-input').value = description || '';
+                document.getElementById('edit-event-for-m1').checked = forM1;
+                document.getElementById('edit-event-for-m2').checked = forM2;
+                
+                // Fermer la modal de détail et ouvrir celle d'édition
+                bootstrap.Modal.getInstance(document.getElementById('eventModal')).hide();
+                const editModal = new bootstrap.Modal(document.getElementById('editEventModal'));
+                editModal.show();
+            }
+            
+            // Mettre à jour un événement
+            document.getElementById('update-event-btn').addEventListener('click', function() {
+                const eventId = document.getElementById('edit-event-id').value;
+                const titleInput = document.getElementById('edit-event-title-input');
+                const dateInput = document.getElementById('edit-event-date-input');
+                const startTimeInput = document.getElementById('edit-event-start-time-input');
+                const endTimeInput = document.getElementById('edit-event-end-time-input');
+                const locationInput = document.getElementById('edit-event-location-input');
+                const descriptionInput = document.getElementById('edit-event-description-input');
+                const forM1 = document.getElementById('edit-event-for-m1').checked;
+                const forM2 = document.getElementById('edit-event-for-m2').checked;
+                
+                // Vérification de base
+                if (!titleInput.value || !dateInput.value || !startTimeInput.value || !endTimeInput.value) {
+                    alert('Veuillez remplir tous les champs obligatoires');
+                    return;
+                }
+                
+                // Création de l'objet date pour start et end
+                const startDateTime = new Date(`${dateInput.value}T${startTimeInput.value}`);
+                const endDateTime = new Date(`${dateInput.value}T${endTimeInput.value}`);
+                
+                // Vérifier que la date de fin est après la date de début
+                if (endDateTime <= startDateTime) {
+                    alert('L\'heure de fin doit être après l\'heure de début');
+                    return;
+                }
+                
+                // Préparation des données
+                const eventData = {
+                    id: eventId,
+                    title: titleInput.value,
+                    start: startDateTime.toISOString(),
+                    end: endDateTime.toISOString(),
+                    location: locationInput.value,
+                    description: descriptionInput.value,
+                    for_m1: forM1,
+                    for_m2: forM2
+                };
+                
+                // Envoi au serveur
+                fetch('/api/update_custom_event', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(eventData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Fermer la modal
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('editEventModal'));
+                        modal.hide();
+                        
+                        // Rafraîchir le calendrier
+                        calendar.refetchEvents();
+                        
+                        alert('Événement mis à jour avec succès');
+                    } else {
+                        alert('Erreur lors de la mise à jour de l\'événement: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    alert('Une erreur est survenue lors de la mise à jour de l\'événement');
+                });
+            });
+            
+            // Supprimer un événement
+            function deleteEvent(eventId) {
+                if (confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')) {
+                    fetch('/api/delete_custom_event', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ id: eventId })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Fermer la modal
+                            bootstrap.Modal.getInstance(document.getElementById('eventModal')).hide();
+                            
+                            // Rafraîchir le calendrier
+                            calendar.refetchEvents();
+                            
+                            alert('Événement supprimé avec succès');
+                        } else {
+                            alert('Erreur lors de la suppression de l\'événement: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erreur:', error);
+                        alert('Une erreur est survenue lors de la suppression de l\'événement');
+                    });
+                }
+            }
+            {% endif %}
         });
     </script>
 </body>
